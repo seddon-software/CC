@@ -1,0 +1,19 @@
+CC := gcc
+CFLAGS := -g -O0 -Wall $(WARNINGS) -std=c11 -pthread 
+SOURCES := $(wildcard *.c)
+EXECUTABLES := $(SOURCES:.c=.exe)
+
+
+all: $(EXECUTABLES)
+
+
+$(EXECUTABLES): %.exe: %.c
+	$(CC) $(CFLAGS) $< -o $@ $(LFLAGS)
+
+
+
+clean:
+	rm -f *.exe
+	rm -r *.exe.dSYM
+	
+	

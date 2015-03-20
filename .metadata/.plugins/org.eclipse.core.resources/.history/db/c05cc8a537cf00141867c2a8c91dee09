@@ -1,0 +1,13 @@
+
+#define QUOTE(P1) #P1
+
+void main (void)
+{
+    int number = 77;
+
+    printf ("%s is %i \n", QUOTE(number), number);
+    printf ("%s is %i \n", "number", number);
+}
+
+
+/* can define PRINT macro */

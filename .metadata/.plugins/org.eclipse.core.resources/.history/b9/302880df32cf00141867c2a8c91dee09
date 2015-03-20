@@ -1,0 +1,28 @@
+CC := gcc
+WARNINGS := -Wall
+CFLAGS := -g -O0 $(WARNINGS) -std=c11 -pthread 
+F_SOURCES := $(wildcard f*.c)
+G_SOURCES := $(wildcard g*.c)
+EXECUTABLES := $(SOURCES:.c=.exe)
+
+
+all: f.exe g.exe
+
+f.exe: $(F_OBJECTS)
+	@echo $(CC) $(CFLAGS) $< -o $@
+
+g.exe: $(G_OBJECTS)
+	@echo $(CC) $(CFLAGS) $< -o $@
+
+$(F_OBJECTS): f%.o: f%.c
+	@echo $(CC) $(CFLAGS) $< -c $@
+
+$(F_OBJECTS): g%.o: g%.c
+	@echo $(CC) $(CFLAGS) $< -c $@
+
+
+clean:
+	rm -f *.exe
+	rm -r *.exe.dSYM
+	
+	

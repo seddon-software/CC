@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <curses.h>
+
+/*********************************************************************/
+
+#define TEXTFILE  "Database/PHONES.TXT"
+#define DATABASE  "Database/PHONES.DBX"
+#define INDEXFILE "Database/PHONES.INX"
+
+#define OK  0
+#define END 1
+
+typedef char String[16];
+
+struct record
+{
+    String FirstName;
+    String LastName;
+    String PhoneNumber;
+};
+
+struct indexRecord
+{
+    String KeyField;
+    long Offset;
+};
+
+typedef struct record      Record;
+typedef struct indexRecord IndexRecord;
+
+/*********************************************************************/
+
+

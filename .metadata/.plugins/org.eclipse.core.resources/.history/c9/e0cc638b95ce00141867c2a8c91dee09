@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////////
+//
+//      Microsoft Unicode macros
+//
+////////////////////////////////////////////////////////////
+
+#include <string.h>
+#include <stdio.h>
+
+
+void main()
+{
+    char name[] = "Glasgow Rangers";
+    char team[50];
+
+    printf("Name:   %s\n", name);
+    printf("Length: %i\n", strlen(name));
+
+    strcpy(team, name);
+    strcat(team, " F.C.");
+    printf("Team:   %s\n", team);
+
+    strlwr(team);
+    printf("team:   %s\n", team);
+
+    strupr(team);
+    printf("TEAM:   %s\n", team);
+}

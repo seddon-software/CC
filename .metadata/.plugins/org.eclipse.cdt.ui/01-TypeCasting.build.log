@@ -1,0 +1,12 @@
+21:37:12 **** Build of configuration Default for project 01-TypeCasting ****
+make all 
+clang++ -g -O0 -fno-elide-constructors -Wall -Wno-unused-variable -Wno-unused-private-field -std=c++1y -pthread -I ~/work/boost_1_57_0  Casts.cpp -o Casts.exe 
+clang++ -g -O0 -fno-elide-constructors -Wall -Wno-unused-variable -Wno-unused-private-field -std=c++1y -pthread -I ~/work/boost_1_57_0  ConstCasts.cpp -o ConstCasts.exe 
+clang++ -g -O0 -fno-elide-constructors -Wall -Wno-unused-variable -Wno-unused-private-field -std=c++1y -pthread -I ~/work/boost_1_57_0  CrossCasts.cpp -o CrossCasts.exe 
+clang++ -g -O0 -fno-elide-constructors -Wall -Wno-unused-variable -Wno-unused-private-field -std=c++1y -pthread -I ~/work/boost_1_57_0  DynamicCasts.cpp -o DynamicCasts.exe 
+clang++ -g -O0 -fno-elide-constructors -Wall -Wno-unused-variable -Wno-unused-private-field -std=c++1y -pthread -I ~/work/boost_1_57_0  ReinterpretCasts.cpp -o ReinterpretCasts.exe 
+clang++ -g -O0 -fno-elide-constructors -Wall -Wno-unused-variable -Wno-unused-private-field -std=c++1y -pthread -I ~/work/boost_1_57_0  RuntimeTypeInformation.cpp -o RuntimeTypeInformation.exe 
+clang++ -g -O0 -fno-elide-constructors -Wall -Wno-unused-variable -Wno-unused-private-field -std=c++1y -pthread -I ~/work/boost_1_57_0  StaticCasts.cpp -o StaticCasts.exe 
+
+21:37:15 Build Finished (took 3s.243ms)
+

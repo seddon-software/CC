@@ -1,0 +1,30 @@
+////////////////////////////////////////////////////////////
+//
+//      Microsoft Unicode macros
+//
+////////////////////////////////////////////////////////////
+
+#include <wchar.h>
+#include <tchar.h>
+#include <stdio.h>
+
+#define _UNICODE
+
+int main()
+{
+    TCHAR name[] = _TEXT("Glasgow Rangers");
+    TCHAR team[50];
+
+    _tprintf(_T("Name:   %s\n"), name);
+    _tprintf(_T("Length: %i\n"), _tclen(name));
+
+    _tcscpy(team, name);
+    _tcscat(team, _T(" F.C."));
+    _tprintf(_T("Team:   %s\n"), team);
+
+    _tcslwr(team);
+    _tprintf(_T("team:   %s\n"), team);
+
+    _tcsupr(team);
+    _tprintf(_T("TEAM:   %s\n"), team);
+}

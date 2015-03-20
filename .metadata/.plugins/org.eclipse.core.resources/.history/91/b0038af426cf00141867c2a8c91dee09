@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int cmp( int *keyNumber, int *number);
+void debug (void);
+void ArraytoText (int *line);
+
+int list[24] = { 40, 26, 18, 33, 42, 17, 11, 24,
+		 20, 16, 55, 31, 23, 57, 52, 13,
+		 59, 20, 19, 53, 88, 12, 78, 75 };
+
+char line   [24*3+1];
+char oldLine[24*3+1];
+
+int main(void)
+{
+	qsort(list, 24, sizeof( int), (int (*)()) cmp);
+}
+
+int cmp( int *keyNumber, int *number)
+{
+    int n;
+
+    if( *keyNumber >  *number) n = +1;
+    if( *keyNumber == *number) n =  0;
+    if( *keyNumber <  *number) n = -1;
+
+    debug();
+    return n;
+}
+
+void debug (void)
+{
+    ArraytoText (line);
+
+    if( strcmp( line, oldLine))
+    {
+	    printf( "%s \n", line);
+	    getch();
+    }
+
+    strcpy( oldLine, line);
+
+}
+
+void ArraytoText (char* line)
+{
+    int i;
+    char word[3+1];
+
+    strcpy( line, "");
+
+    for( i = 0; i < 24; i++)
+    {
+    	sprintf(word, "%3i", list[i]);
+	    strcat( line, word);
+    }
+}

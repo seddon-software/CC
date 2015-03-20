@@ -1,0 +1,23 @@
+CC := gcc
+WARNINGS := -Wall
+CFLAGS := -g -O0 $(WARNINGS) -std=c11 -pthread 
+SOURCES := $(wildcard *.c)
+OBJECTS := $(SOURCES:.c=.o)
+
+
+all: Trees.exe
+
+Trees.exe: $(OBJECTS)
+	$(CC) $(CFLAGS) $< -o $@ $(LFLAGS)
+
+$(OBJECTS): %.o: %.c
+	$(CC) $(CPFLAGS) -c $<
+	
+%.c: %.obj: 
+	$(CC) $(CFLAGS) $<
+
+
+clean:
+	rm -f *.exe
+	rm -r *.exe.dSYM
+	

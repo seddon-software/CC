@@ -1,0 +1,29 @@
+21:41:13 **** Build of configuration Default for project Demos ****
+make all 
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+gcc -g -O0 -Wall -std=c11 -pthread  BubbleSort.c -o BubbleSort.exe 
+gcc -g -O0 -Wall -std=c11 -pthread  FunctionPointers.c -o FunctionPointers.exe 
+gcc -g -O0 -Wall -std=c11 -pthread  QuickSort.c -o QuickSort.exe 
+gcc -g -O0 -Wall -std=c11 -pthread  ReversePrint.c -o ReversePrint.exe 
+gcc -g -O0 -Wall -std=c11 -pthread  Search.c -o Search.exe 
+Search.c:34:6: warning: unused variable 'x' [-Wunused-variable]
+        int x = 'Foo!';
+            ^
+1 warning generated.
+gcc -g -O0 -Wall -std=c11 -pthread  VariadicFunctions.c -o VariadicFunctions.exe 
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+21:41:29 **** Incremental Build of configuration Default for project Demos ****
+make all 
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
