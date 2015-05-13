@@ -1,3 +1,5 @@
+# place the shared library in the default place and update the kernel cache 
+# so it can be located
 cd mylib
 gcc -shared -o libf1.so f1.c
 sudo cp libf1.so /usr/lib
@@ -10,5 +12,6 @@ cd ../src
 gcc f_main.c f2.c f3.c -lf1 -o f.exe
 f.exe
 
-
+# clean up
+sudo rm /usr/lib/libf1.so
 

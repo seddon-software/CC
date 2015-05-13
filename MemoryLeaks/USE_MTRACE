@@ -1,5 +1,9 @@
+# To use MTRACE, add a call to mtrace() at the begiining of your C program
+# (see myfile.c)
+
 export MALLOC_CHECK_=1
 gcc -Wall -pedantic myfile.c -o myfile.exe
 MALLOC_TRACE=mtrace.txt myfile.exe
 cat mtrace.txt
+mtrace mtrace.txt
 

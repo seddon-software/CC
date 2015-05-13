@@ -1,0 +1,12 @@
+# Use the LD_LIBRARY_PATH environment variable to locate the shared library
+# This works, but is fragile (the environment variable must be set correctly)
+cd mylib
+gcc -shared -o libf1.so f1.c
+
+cd ../src
+export LD_LIBRARY_PATH=../mylib
+gcc f_main.c f2.c f3.c -L../mylib -lf1 -o f.exe
+f.exe
+
+
+
