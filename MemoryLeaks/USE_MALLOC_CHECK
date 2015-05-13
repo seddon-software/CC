@@ -1,0 +1,4 @@
+export MALLOC_CHECK_=1
+gcc -Wall -Wpedantic myfile.c -o myfile.exe
+myfile.exe
+

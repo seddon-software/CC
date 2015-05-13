@@ -1,0 +1,14 @@
+cd mylib
+gcc -shared -o libf1.so f1.c
+sudo cp libf1.so /usr/lib
+sudo chmod +x /usr/lib/libf1.so
+
+sudo ldconfig	# update cache
+sudo ldconfig -p | grep libf1.so
+
+cd ../src
+gcc f_main.c f2.c f3.c -lf1 -o f.exe
+f.exe
+
+
+

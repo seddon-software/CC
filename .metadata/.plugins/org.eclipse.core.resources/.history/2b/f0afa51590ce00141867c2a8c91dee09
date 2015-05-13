@@ -1,8 +1,0 @@
-//#include <stdio.h>
-
-int main(void)
-{
-	int x = 24;
-	printf("%i\n", x);
-	return 0;
-}

@@ -1,8 +1,0 @@
-#define CUBE(X)   X * X * X
-
-void main (void)
-{
-    int result, n = 3;
-
-    result = CUBE (n);
-}

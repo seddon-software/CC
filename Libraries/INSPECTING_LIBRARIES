@@ -1,0 +1,4 @@
+cd mylib
+file libf1.so
+nm libf1.so
+

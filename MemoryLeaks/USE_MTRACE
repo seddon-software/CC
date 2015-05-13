@@ -1,0 +1,5 @@
+export MALLOC_CHECK_=1
+gcc -Wall -pedantic myfile.c -o myfile.exe
+MALLOC_TRACE=mtrace.txt myfile.exe
+cat mtrace.txt
+

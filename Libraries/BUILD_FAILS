@@ -1,0 +1,7 @@
+cd mylib
+gcc -shared -o libf1.so f1.c
+
+cd ../src
+gcc f_main.c f2.c f3.c -o f.exe
+
+

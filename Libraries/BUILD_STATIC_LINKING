@@ -1,0 +1,10 @@
+cd mylib
+gcc -c f1.c
+ar -cvr libf1.a f1.o
+ar -t libf1.a
+
+cd ../src
+gcc f_main.c f2.c f3.c -L../mylib -lf1 -o f.exe
+f.exe
+
+

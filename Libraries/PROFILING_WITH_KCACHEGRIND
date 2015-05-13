@@ -1,0 +1,7 @@
+cd src
+rm callgrind.out.*
+gcc myfile.c -lm -o myfile.exe
+valgrind --tool=callgrind myfile.exe
+kcachegrind
+myfile.exe
+

@@ -1,0 +1,3 @@
+= Start
+@ myfile.exe:[0x80484fe] + 0x843d378 0xc8
+@ myfile.exe:[0x8048560] - 0x843d37c
