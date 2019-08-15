@@ -10,7 +10,7 @@ void ElapsedTime(void)
 	processorTimeUsed =  (double) clockTicks / CLOCKS_PER_SEC;
 }
 
-clock_t   timeInSeconds;
+time_t   timeInSeconds;
 struct tm dateAndTime;
 
 void DateAndTime(void)

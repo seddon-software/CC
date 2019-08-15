@@ -1,13 +1,19 @@
-21:41:29 **** Incremental Build of configuration Default for project Demos ****
+21:02:46 **** Build of configuration Default for project Demos ****
 make all 
-make[1]: Nothing to be done for `all'.
-make[1]: Nothing to be done for `all'.
-make[1]: Nothing to be done for `all'.
-make[1]: Nothing to be done for `all'.
-make[1]: Nothing to be done for `all'.
-make[1]: Nothing to be done for `all'.
-make[1]: Nothing to be done for `all'.
-make[1]: Nothing to be done for `all'.
+clang -c -g -O0 -Wall -std=c11 -pthread Create.c
+clang -c -g -O0 -Wall -std=c11 -pthread  Create.c
+clang -c -g -O0 -Wall -std=c11 -pthread Delete.c
+clang -c -g -O0 -Wall -std=c11 -pthread  Delete.c
+clang -c -g -O0 -Wall -std=c11 -pthread Main.c
+clang -c -g -O0 -Wall -std=c11 -pthread  Main.c
+clang -c -g -O0 -Wall -std=c11 -pthread Order.c
+clang -c -g -O0 -Wall -std=c11 -pthread  Order.c
+clang -c -g -O0 -Wall -std=c11 -pthread Search.c
+clang -c -g -O0 -Wall -std=c11 -pthread  Search.c
+clang -c -g -O0 -Wall -std=c11 -pthread Trees.c
+clang -c -g -O0 -Wall -std=c11 -pthread  Trees.c
+clang Create.o Delete.o Main.o Order.o Search.o Trees.o -o Trees.exe
+clang Create.o Delete.o Main.o Order.o Search.o Trees.o -o Trees.exe
 
-21:41:29 Build Finished (took 208ms)
+21:02:47 Build Finished. 0 errors, 0 warnings. (took 456ms)
 

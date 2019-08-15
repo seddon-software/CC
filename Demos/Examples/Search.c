@@ -31,7 +31,6 @@ void printCard(const CARD* pCard);
 
 int main(void)
 {
-	int x = 'Foo!';
     COMPARE_FUNCTION fcmp;
 
     CARD *cardPtr;

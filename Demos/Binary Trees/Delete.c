@@ -32,6 +32,7 @@ NODE* findNode(int id, NODE* current)
     if (current->id == id) return current;
     if (current->id >  id) return findNode(id, current->left);
     if (current->id <  id) return findNode(id, current->right);
+    return NULL;
 }
 
 /******************************************************************/

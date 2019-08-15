@@ -6,9 +6,9 @@ OBJECTS := $(SOURCES:.c=.o)
 
 
 
-all: Trees.exe
+all: Problems.exe
 
-Trees.exe: $(OBJECTS)
+Problems.exe: $(OBJECTS)
 	@echo $(CC) $? -o $@
 	$(CC) $? -o $@
 	
