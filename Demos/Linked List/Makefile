@@ -6,9 +6,9 @@ OBJECTS := $(SOURCES:.c=.o)
 
 
 
-all: Trees.exe
+all: Main.exe
 
-Trees.exe: $(OBJECTS)
+Main.exe: $(OBJECTS)
 	$(CC) $? -o $@
 	
 $(OBJECTS): %.o: %.c
