@@ -1,0 +1,4 @@
+gcc -g -O0 -Wall -Wpedantic myfile.c -o myfile.exe
+valgrind --leak-check=yes myfile.exe
+
+

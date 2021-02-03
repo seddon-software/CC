@@ -1,0 +1,13 @@
+set -v
+# make sure core file gets created
+ulimit -c unlimited
+
+# rebuild exe file
+make clean
+make
+
+# run file that crashes
+myfile.exe
+
+# examine core file
+file core*

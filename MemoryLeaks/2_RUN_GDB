@@ -1,0 +1,1 @@
+gdb -q -n -ex "b main" -ex "l main" -tui -se=myfile.exe -c core

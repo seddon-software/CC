@@ -1,4 +1,9 @@
-export MALLOC_CHECK_=1
-gcc -Wall -Wpedantic myfile.c -o myfile.exe
+set -v
+# compile
+export MALLOC_CHECK_=3
+gcc -ggdb -Wall -Wpedantic myfile.c -o myfile.exe
+
+
+# run file that crashes
 myfile.exe
 

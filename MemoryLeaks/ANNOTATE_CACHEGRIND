@@ -1,0 +1,2 @@
+set -v
+cg_annotate cachegrind.out.*

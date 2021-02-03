@@ -1,6 +1,0 @@
-# Use the nm command to look at the contents of a library
-
-cd mylib
-file libf1.so
-nm libf1.so
-

@@ -1,0 +1,7 @@
+This suite of programs uses the raw data in the text file: PHONES.TXT
+
+CreateDatebase.c:     creates the database file: PHONES.DBX
+CreateIndex.c:        creates an index file: PHONES.index
+PrintDatabase.c:      print the entire database
+PrintIndex.c:         print the database's index file
+Lookup.c:             lookup a record in the database

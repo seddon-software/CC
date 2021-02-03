@@ -1,0 +1,19 @@
+set -v
+# create a static library called 'libf1.a'
+# by first compiling 'f1.c' using the -c option of gcc
+# and then using 'ar' to make a library archive
+cd mylib
+gcc -c f1.c
+ar -cvr libf1.a f1.o
+ar -t libf1.a
+
+# complete the static linking by specifying:
+#   which directory contains the library: -L ../mylib
+#   the name of the library: -l f1
+# note all library names are of the form libxxx.a, but you only specify the xxx part
+cd ../src
+gcc -static f_main.c f2.c f3.c -L ../mylib -l f1 -o f.exe
+f.exe
+
+
+

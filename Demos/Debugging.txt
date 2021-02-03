@@ -1,0 +1,92 @@
+Notes on gdb
+============
+
+1. Use an initialisation file with gdb located in you home directory
+   called:
+
+        .gdbinit
+
+   No that this file is read before command line args are processed and
+   the symbol table is loaded.  If this is a problem you can use the -x
+   option to delay reading this file until after the above processing is
+   complete (see example below).
+
+ 2. Example commands for .gdbinit:
+
+        set breakpoint pending on
+        file a.out
+        tty /dev/pts/1
+        break main
+        run
+        list
+
+   Note the first command is used to suppress unwanted questions when
+   setting breakpoints.
+ 
+ 3. Invoke gdb using the "Text User Interface":
+
+        gdb -q -tui
+ 
+ 4. TUI will often mess up the display and you will need to refresh
+   the screen with Ctl-L or use the refresh command.  Alternatively
+   you can add a hook in .dbinit to automatically refresh after a
+   given command, for example:
+
+        define next-hook
+            refresh
+        end
+
+5. If your program outputs to the screen then this will also mess up
+   the screen.  In such cases it is best to send output to a different
+   window.  To do this add the following to .gdbinit file.
+
+        tty /dev/pts/<n>
+
+   where <n> is the number of the psuedo terminal slave.  Invoke the
+   Unix command 'tty' in a separate window to determine the pts to use.
+   Note, this command must be executed BEFORE the run command.  You will
+   get an error message saying:
+
+        warning: GDB: Failed to set controlling terminal: Operation not permitted
+
+   which you can just ignore.
+
+ 6. I found the following manual very useful:
+
+        https://support.hpe.com/hpsc/doc/public/display?docId=emr_na-c04221952
+
+   even though it was meant primarily for HP-UX systems.
+
+7. If the executable to debug has command line parameters, you can use
+   the --args option to invoke gdb:
+
+        gdb --args exe arg1 arg2 arg3 ...
+ 
+8. You can use the following shell script to achieve the above:
+
+        #! /bin/bash
+
+        if [ $# -eq 0 ]
+        then
+            echo "Please supply an executable file."
+            echo "Usage: DEBUG exe args"
+            exit 1
+        fi
+
+        exeFile=$1
+        shift
+        if [ $# -ne 0 ]
+        then
+            ARGS="-args $*"
+        fi
+
+        gdb -q -tui -x $HOME/.gdbinit --args $exeFile $*
+
+ 9. When debugging programs that use the fork() system call, gdb can be made to debug parent and child by
+   adding the following command to .gdbinit:
+
+        set detach-on-fork off
+
+   If detach-on-fork is set to on, gdb will only debug the parent and the child will run independently.
+
+ 
