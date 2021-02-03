@@ -13,6 +13,8 @@ void plantTree (int id)
     rootPtr->id    = id;
     rootPtr->left  = NULL;
     rootPtr->right = NULL;
+
+    displayTree(rootPtr);
 }
 
 void growTree(int id)
@@ -21,5 +23,7 @@ void growTree(int id)
 
     parentPtr = searchTree (id, rootPtr);
     attachNode (id, parentPtr);
+
+    displayTree(rootPtr);
 }
 

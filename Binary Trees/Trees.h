@@ -38,6 +38,7 @@ void  overwriteNode(NODE* target, NODE* parent);
 NODE* adjustPointers(NODE* parent);
 void  freeMemory(NODE* theNode);
 
+void hitKeyToContinue();
 void displayTree(NODE* p);
 NODE* getId(int n, NODE* p);
 void Print(const char* s, int repeats);
