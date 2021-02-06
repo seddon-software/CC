@@ -1,16 +1,15 @@
 CC := clang
 WARNINGS := -Wall
-CFLAGS := -g -O0 $(WARNINGS) -std=c11 -pthread 
+CFLAGS := -g -O0 $(WARNINGS) -std=c11
 SOURCES := $(wildcard *.c)
 OBJECTS := $(SOURCES:.c=.o)
 
 
 
-all: all.exe
+all: Main.exe
 
-all.exe: $(OBJECTS)
-	@echo $<
-	$(CC) $? -o $@
+Main.exe: $(OBJECTS)
+	$(CC) $(OBJECTS) -o $@
 	
 $(OBJECTS): %.o: %.c
 	$(CC) -c $(CFLAGS) $<

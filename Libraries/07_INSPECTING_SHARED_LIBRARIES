@@ -7,3 +7,7 @@ ls -l
 # inspect the statically linked library:
 file libf1.a
 nm libf1.a
+
+# display .plt section
+cd ../src
+objdump --section=.plt -d -S f.exe | more

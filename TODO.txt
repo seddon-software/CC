@@ -11,3 +11,18 @@ dlclose
 
 objdump (otool)
 
+struct
+sockets: ip and port
+header files
+strcmp
+callbacks
+pub-sub
+select
+pthreads
+udp tcp
+ref parameters
+printf
+argc, argv
+
+
+
