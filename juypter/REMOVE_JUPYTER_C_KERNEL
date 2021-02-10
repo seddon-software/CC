@@ -1,0 +1,4 @@
+python -m pip uninstall jupyter-c-kernel
+jupyter kernelspec remove c 
+jupyter kernelspec list
+

@@ -1,0 +1,5 @@
+python -m pip install jupyter-c-kernel --user
+cd $HOME/.local/bin
+./install_c_kernel --user
+jupyter kernelspec list
+
