@@ -1,0 +1,15 @@
+f_main.exe: f1.o f2.o f3.o f_main.o
+	gcc f1.o f2.o f3.o f_main.o  -o f_main.exe
+
+f1.o: f1.c f.h
+	gcc -c f1.c
+
+f2.o: f2.c f.h
+	gcc -c f2.c
+
+f3.o: f3.c f.h
+	gcc -c f3.c
+
+f_main.o: f_main.c f.h
+	gcc -c f_main.c
+
