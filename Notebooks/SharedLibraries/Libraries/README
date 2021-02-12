@@ -1,0 +1,12 @@
+The scripts in this project attempt to build static and shared libraries
+The src directory contains source files:
+	f_main.c f2.c f3.c
+The f_main.c program calls functions f1(), f2() and f3().  The last two functions are 
+implemented in f2.c and f3.c, but f1() is implemented in a library.
+
+The mylib directory contains the missing f1.c file.  The scipts build a static library:
+	libf1.a
+and a shared library
+	libf1.so
+	
+

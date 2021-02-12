@@ -1,0 +1,2 @@
+set -v
+objdump -t src/myfile.exe
