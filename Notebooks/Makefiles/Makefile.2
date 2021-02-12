@@ -14,4 +14,4 @@ f_main.o: f_main.c f.h
 	gcc -c f_main.c
 
 clean:
-	rm *.o *.exe
+	@-rm -f *.o *.exe 2>/dev/null

@@ -2,5 +2,5 @@
 
 void f2()
 {
-	printf("This is f2()\n");
+	puts("This is f2()");
 }

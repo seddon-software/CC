@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "../DevelopingMakefiles/f.h"
+#include "f.h"
 
 int main()
 {

@@ -28,7 +28,6 @@ run: all
 clean:
 	-rm -f *.o
 	-rm -f *.exe
-	-rm -r *.exe.dSYM
 	
 	
 print:

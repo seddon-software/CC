@@ -5,4 +5,4 @@ main.exe: f1.o f2.o f3.o f_main.o
 	gcc -c $<
 
 clean:
-	rm *.o *.exe
+	@-rm -f *.o *.exe
