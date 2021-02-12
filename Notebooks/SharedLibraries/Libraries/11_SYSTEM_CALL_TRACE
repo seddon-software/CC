@@ -1,4 +1,0 @@
-set -v
-cd src
-gcc myfile.c -o myfile.exe
-strace myfile.exe

@@ -1,1 +1,0 @@
-objdump -j .plt -d main -S f.exe | more
