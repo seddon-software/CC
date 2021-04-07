@@ -1,15 +1,12 @@
-ranlib
-ar
-nm
-ld
-cc
+LinuxApi
+CStrings
+
 http://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html
 
 dlopen
 dlsym
 dlclose
 
-objdump (otool)
 
 struct
 sockets: ip and port
@@ -21,7 +18,6 @@ select
 pthreads
 udp tcp
 ref parameters
-printf
 argc, argv
 
 
