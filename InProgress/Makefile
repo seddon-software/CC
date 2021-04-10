@@ -5,7 +5,7 @@ SOURCES := $(wildcard *.c)
 EXECUTABLES := $(SOURCES:.c=.exe)
 
 
-all: $(EXECUTABLES)
+all.exe: $(EXECUTABLES)
 
 
 $(EXECUTABLES): %.exe: %.c
