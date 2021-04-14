@@ -1,0 +1,48 @@
+The Intermediate C Programming course will cover a number of worked examples and contain Jupyter 
+Notebook examples for building libraries.  It will be assumed you are using Linux on a Diamond 
+computer with your normal login.  If you want to use a different operating system you will need
+make sure you can run the examples yourself; there will not be time to help you setup a Windows
+or MacOS machine once the course starts.  If you intend to do this please notify the trainer on:
+    seddon_software@btinternet.com
+
+Please follow the instuctions below to get your Diamond account ready for the course:
+
+Before anything else you need to setup your environment by typing the following on the command 
+line:
+    module load python/3.7
+or
+    module load python/3.8
+
+Make sure you don't have any other versions of Python or gcc loaded - unload as necessary.  For example:
+
+    module unload python/ana
+
+I'll be runnng most of the examples in Visual Studio Code (vscode), but you can use the command line, 
+vim or Eclipse if you prefer.
+
+To run the Jupyter Notebook tutorials we need to first install Jupyter C kernel:
+
+    python -m pip install jupyter-c-kernel --user
+    cd $HOME/.local/bin
+    ./install_c_kernel --user
+
+To check which kernels have been installed:
+
+    jupyter kernelspec list
+
+Before you start the notebook perform a little CSS customisation by running:
+
+    cd resources
+    ./setup
+    cd ..
+
+This will copy custom.css to the Jupyter config directory.
+
+Then to start Jupyter notebook:
+
+    jupyter notebook --browser firefox &
+
+Just for the record, the tutorials were downloaded with:
+
+    git clone https://github.com/seddon-software/linux_intro.git
+
