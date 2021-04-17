@@ -1,10 +1,11 @@
 /*******************************************************************
 
-		simple.c
+		VariadicFunctions.c
 
 *******************************************************************/
 
 #include <stdarg.h>
+#include <stdio.h>
 
 void function (int firstArg, ...);
 
@@ -24,6 +25,8 @@ void function (int firstArg, ...)
     x = va_arg (argPointer, int);
     y = va_arg (argPointer, int);
     z = va_arg (argPointer, int);
+    int sum = x + y + z;
+    printf("%i\n", sum);
 
     va_end (argPointer);
 }

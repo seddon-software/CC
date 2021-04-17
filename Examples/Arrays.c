@@ -12,6 +12,6 @@ int main(void)
 {
 	int a[] = {5, 10, 15, 20, 25};
 	int* ptr = a;
-	printf("%i", a[0]);
+	printf("%i %i \n", a[0], ptr[0]);
 }
 

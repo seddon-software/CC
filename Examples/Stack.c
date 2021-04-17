@@ -33,10 +33,11 @@ int pop() {
       return data;
    } else {
       printf("Could not retrieve data, Stack is empty.\n");
+      return -1;
    }
 }
 
-int push(int data) {
+void push(int data) {
 
    if(!isfull()) {
       top = top + 1;   

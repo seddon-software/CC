@@ -1,15 +1,16 @@
 1. Utilities
 ============
-cc ld ranlib ar nm objdump
+cc ld ranlib ar nm objdump make
 valgrind cachegrind callgrind
 
-2. Libraries
-============
-static and shared libraries (DLLs)
+2. Static and Shared Libraries
+==============================
+static linking
+shared libraries (DLLs)
 
 3. Language
 ===========
-printf
+printf, scanf
 break and continue
 command line arguments
 typedef
@@ -34,14 +35,15 @@ setjump longjump
 ===========
 complex declarations
 python - C interaction
-reference counting
 2D arrays as function parameters
 
 6. Data Structures
 ==================
+stack
 link list
 binary tree
 hash table
 
-
-man 3 intro
+7. Linux System Calls
+=====================
+man 2 intro
