@@ -1,6 +1,6 @@
 /**********************************************************************
 
-	File:           BUBBLE.C
+	File:           BubbleSort.C
 
 	Description:    This routine shows a bubble sort in action.
 
