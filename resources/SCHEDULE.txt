@@ -1,35 +1,42 @@
-1. Utilities
-============
-cc ld ranlib ar nm objdump make
-valgrind cachegrind callgrind
+Timings
+=======
 
-2. Static and Shared Libraries
-==============================
-static linking
-shared libraries (DLLs)
+ 9:00 - 10:00
+10:30 - 12:00
+ 1:30 -  2:30
+ 3:00 -  4:00
 
-3. Language
+1. Language
 ===========
+arrays
 printf, scanf
 break and continue
 command line arguments
-typedef
-side effects
+side effect operators
 short circuit operators
-definitions and declarations
-arrays
 unions
 bitfields
 strings
 macros
+typedef
 booleans (C99)
 #pragma and memory alignment
 extern
 
-4. Memory Model
+2. Memory Model
 ===============
 stack heap data text
 setjump longjump
+
+3. Utilities
+============
+cc ld ranlib ar nm objdump make
+valgrind cachegrind callgrind
+
+4. Static and Shared Libraries
+==============================
+static linking
+shared libraries (DLLs)
 
 5. Advanced
 ===========
