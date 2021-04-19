@@ -17,7 +17,7 @@ Make sure you don't have any other versions of Python or gcc loaded - unload as 
 
     module unload python/ana
 
-I'll be runnng most of the examples in Visual Studio Code (vscode), but you can use the command line, 
+I'll be running most of the examples in Visual Studio Code (vscode), but you can use the command line, 
 vim or Eclipse if you prefer.
 
 To run the Jupyter Notebook tutorials we need to first install Jupyter C kernel:
