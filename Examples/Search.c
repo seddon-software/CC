@@ -49,7 +49,6 @@ int main(void)
     cardPtr = bsearch( &s3, hand, 8, sizeof( CARD), fcmp);
     printCard(cardPtr);
 }
-
 int cmpCards(const CARD *keyCard,const CARD *card)
 {
     int keyRank, cardRank, result;
