@@ -33,6 +33,7 @@
     "cmake.configureOnOpen": false,
     "files.associations": {
         "*.exe": "nm",
-        "socket.h": "c"
+        "socket.h": "c",
+        "stdbool.h": "c"
     }
 }

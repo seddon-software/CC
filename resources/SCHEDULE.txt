@@ -10,18 +10,22 @@ Timings
 ===========
 arrays
 printf, scanf
-break and continue
 command line arguments
 side effect operators
 short circuit operators
 unions
 bitfields
 strings
-macros
 typedef
+
+header files
+multiple inclusion
 booleans (C99)
-#pragma and memory alignment
+macros
+preprocessor
 extern
+statics
+break and continue
 
 2. Memory Model
 ===============
@@ -41,8 +45,8 @@ shared libraries (DLLs)
 5. Advanced
 ===========
 complex declarations
-python - C interaction
 2D arrays as function parameters
+python - C interaction
 
 6. Data Structures
 ==================
@@ -54,3 +58,17 @@ hash table
 7. Linux System Calls
 =====================
 man 2 intro
+
+
+Note:
+To get the Python-C examples, you need to download the Python examples:
+
+    git clone https://github.com/seddon-software/python-course.git
+
+The cd to folder containing .vscode
+	cd python-course
+
+Fire up vscode:
+	code .
+
+When vscode fires up install the Python Extension module and you're good to go. 
