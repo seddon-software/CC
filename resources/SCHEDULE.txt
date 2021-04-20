@@ -12,9 +12,6 @@ arrays
 printf, scanf
 command line arguments
 side effect operators
-short circuit operators
-unions
-bitfields
 strings
 typedef
 
@@ -23,6 +20,9 @@ multiple inclusion
 booleans (C99)
 macros
 preprocessor
+short circuit operators
+unions
+bitfields
 extern
 statics
 break and continue
