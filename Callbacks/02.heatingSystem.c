@@ -32,13 +32,13 @@ int main()
 	tc[2]  = (TimerController) { &switch_on, "boiler B" };
 	tc[3]  = (TimerController) { &switch_off, "boiler B" };
 	tc[7]  = (TimerController) { &switch_on, "boiler B" };
-	tc[8]  = (TimerController) { &switch_off, "boiler B" };
+	tc[9]  = (TimerController) { &switch_off, "boiler B" };
 	tc[11] = (TimerController) { &service, "boiler B" };
 
     for(int t = 0; t < 16; t++)
     {
         TimerController c = tc[t];
-        if(tc[t].fp) {
+        if(c.fp) {
             c.fp(tc[t].s, t);
         }
     }
