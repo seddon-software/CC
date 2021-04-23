@@ -9,12 +9,12 @@ int main(int argc, char *argv[]) {
     char *src, *dest;
     struct stat statbuf;
 
-    if (argc != 3) {
-        fprintf(stderr, "Usage: %s source dest\n", argv[0]);
-        exit(1);
-    }
+    // if (argc != 3) {
+    //     fprintf(stderr, "Usage: %s source dest\n", argv[0]);
+    //     exit(1);
+    // }
 
-    source = open(argv[1], O_RDONLY);
+    source = open("source", O_RDONLY);
     if (source < 0) {
         perror(argv[1]);
         exit(1);
@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 
     len = statbuf.st_size;
 
-    target = open(argv[2], O_RDWR | O_CREAT, statbuf.st_mode & PERMS);
+    target = open("destination", O_RDWR | O_CREAT, statbuf.st_mode & PERMS);
     if (target < 0) {
         perror(argv[2]);
         exit(1);

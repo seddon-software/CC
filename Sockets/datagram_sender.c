@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
   addr.sin_family = AF_INET;
   addr.sin_port = htons(2000);
 //  addr.sin_addr.s_addr = inet_addr(argv[1]);
-  addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+  addr.sin_addr.s_addr = inet_addr("127.0.0.1"); // localhost
 
   n=sendto(sockfd,msg,strlen(msg),0,(struct sockaddr*)&addr, sizeof(addr));
   if (n < 0)

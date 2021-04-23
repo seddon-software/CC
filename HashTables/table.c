@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define BINS 101
+#define BINS 29
 typedef struct {
     char key[16];
     int value;
@@ -56,9 +56,8 @@ void printHashTable(Node* hashTable[]) {
 }
 int main(void) {
     Node* hashTable[BINS] = {NULL};
-//    clearHashTable(hashTable);
     Pair names[] = {{"John",  42000},
-                    {"Mary",  21000},
+                    {"Jon",   21000},
                     {"Tom",   26000},
                     {"Ali",   40000},
                     {"Zoe",   45000},

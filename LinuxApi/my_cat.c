@@ -12,27 +12,19 @@ int main(int argc, char *argv[]) {
 	void doFile(int);
 
 	/*
-	 * If no arguments, copy stdin to stdout.
-	 */
-	if (argc == 1)
-		doFile(0);
+		* Process each argument one at a time, open the file and
+		* then copy its contents to stdout.
+		*/
+	fd = open("headers.h", O_RDONLY, 0);
 
-	for (i = 1; i < argc; i++) {
-		/*
-		 * Process each argument one at a time, open the file and
-		 * then copy its contents to stdout.
-		 */
-		fd = open(argv[i], O_RDONLY, 0);
-
-		if (fd < 0) {
-			perror(argv[i]);
-			exit(1);
-		}
-
-		doFile(fd);
-
-		close(fd);
+	if (fd < 0) {
+		perror(argv[i]);
+		exit(1);
 	}
+
+	doFile(fd);
+
+	close(fd);
 
 	return 0;
 

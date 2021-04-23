@@ -23,7 +23,7 @@
     //     "algorithm": "c"
     // },
     "editor.minimap.enabled": false,
-    "editor.fontSize": 24,
+    "editor.fontSize": 18,
     "files.exclude": {
         "**/*.o": true,
         "**/*.exe": true

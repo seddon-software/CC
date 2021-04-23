@@ -26,7 +26,7 @@
 
 int main(void)
 {
-    int flag;
+    int flag = 0;
 
     flag  = BIT0 | BIT4 | BIT8 | BIT12;
     flag |= BIT1 | BIT2 | BIT3;

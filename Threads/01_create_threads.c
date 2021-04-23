@@ -2,6 +2,13 @@
 //
 //  Create Threads
 //
+//  notes for vscode:
+//  ================
+//  To see info about threads (use debug console):
+//      -exec info threads
+//  To switch to a thread 3:
+//      -exec thread 3
+//
 ////////////////////////////////////////////////////////////
 
 #include <pthread.h>

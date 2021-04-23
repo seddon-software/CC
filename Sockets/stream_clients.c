@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
         pid = fork();
         if(pid > 0) exit(0);  // parent exits, child continues
         sockfd = createSocket();
-        connectToServer(sockfd, "127.0.0.1", 2000);
+        connectToServer(sockfd, "127.0.0.1", 2001);
         writeToServer(sockfd);
     }
 }

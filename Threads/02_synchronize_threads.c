@@ -57,8 +57,8 @@ int main(void) {
 
     pthread_create(&t1, 0, work, (void*) &(PARAMS){"1", &lock1});
     pthread_create(&t2, 0, work, (void*) &(PARAMS){"2", &lock1});
-    pthread_create(&t3, 0, work, (void*) &(PARAMS){"3", &lock2});
-    pthread_create(&t4, 0, work, (void*) &(PARAMS){"4", &lock2});
+    pthread_create(&t3, 0, work, (void*) &(PARAMS){"3", &lock1});
+    pthread_create(&t4, 0, work, (void*) &(PARAMS){"4", &lock1});
 
     pthread_join(t1, 0);
     pthread_join(t2, 0);

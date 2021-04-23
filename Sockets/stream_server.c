@@ -89,7 +89,7 @@ int main(int argc, char *argv[]) {
     signal(SIGTERM, TERMhandler);
 
     sockfd = createSocket();
-    addr = bindToAddress(sockfd, 2000);
+    addr = bindToAddress(sockfd, 2001);
     setupListenBuffer(sockfd);
 
     for (;;) { // Loop waiting for requests and servicing them
