@@ -4,7 +4,8 @@
 #define UK  2
 #define DM  3
 
-
+// command line:
+//      gcc -E -DUSD=1 02.ConditionalCompilation.c
 int main (void)
 {
 

@@ -6,18 +6,15 @@
 
 
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
-typedef struct {
-    char name[32];
-    int salary;
-} DATA;
-
-typedef struct Node
+struct Node
 {
-    DATA* pData;
+    int id;
     struct Node *next;
-} NODE;
+    struct Node *prev;
+};
 
+typedef struct Node NODE;
 extern NODE head;
+extern NODE tail;

@@ -22,6 +22,7 @@
     //     "typeinfo": "c",
     //     "algorithm": "c"
     // },
+    "terminal.integrated.fontSize": 18,
     "editor.minimap.enabled": false,
     "editor.fontSize": 18,
     "files.exclude": {
