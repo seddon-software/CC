@@ -22,9 +22,9 @@
     //     "typeinfo": "c",
     //     "algorithm": "c"
     // },
-    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontSize": 12,
     "editor.minimap.enabled": false,
-    "editor.fontSize": 18,
+    "editor.fontSize": 12,
     "files.exclude": {
         "**/*.o": true,
         "**/*.exe": true
