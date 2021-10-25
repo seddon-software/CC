@@ -1,0 +1,12 @@
+If you want to use vim to write your code then its best to configure defaults for the editor.  You add these defaults to your '~/.vimrc' file:
+
+set number
+set shiftwidth=4
+set showmatch
+syntax on
+colorscheme industry
+set tabstop=4
+set autoindent
+set expandtab
+set softtabstop=4
+set cursorline
