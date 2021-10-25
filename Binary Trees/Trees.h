@@ -40,6 +40,7 @@ void  freeMemory(NODE* theNode);
 
 void hitKeyToContinue();
 void displayTree(NODE* p);
+void displayListOfNodes();
 NODE* getId(int n, NODE* p);
 void Print(const char* s, int repeats);
 void displayLevel(int n);
@@ -50,3 +51,4 @@ void displayAllLevels();
 
 extern NODE *rootPtr;
 extern int ids[32];
+extern int nodes[32];

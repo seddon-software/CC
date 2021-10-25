@@ -91,9 +91,18 @@ void displayAllLevels()
 
 void hitKeyToContinue()
 {
-	// printf("hit any key to continue");
-	// fflush(stdout);
 	getchar();
+}
+
+void displayListOfNodes()
+{
+	printf("Nodes: ");
+	int size = sizeof(nodes)/sizeof(int);
+	for(int i = 0; i < size; i++)
+	{
+		if(nodes[i] != 0) printf("%i ", nodes[i]);
+	}
+	printf("\nhit a key to continue");
 }
 
 void displayTree(NODE* p)
@@ -108,5 +117,6 @@ void displayTree(NODE* p)
 			ids[i] = 0;
 	}
 	displayAllLevels();
+	displayListOfNodes();
 	hitKeyToContinue();
 }

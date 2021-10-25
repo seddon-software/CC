@@ -12,7 +12,7 @@ void inOrder (NODE *ptr)
     printf("");
     fflush(stdout);
     inOrder (ptr->left);
-    printf ("%3i \n", ptr->id);
+    printf ("%3i .", ptr->id);
     printf("");
     fflush(stdout);
     inOrder (ptr->right);
@@ -22,7 +22,7 @@ void preOrder (NODE *ptr)
 {
     if (ptr == NULL) return;
    
-    printf ("%3i \n", ptr->id);
+    printf ("%3i .", ptr->id);
     printf("");
     fflush(stdout);
     preOrder (ptr->left);
@@ -40,7 +40,7 @@ void postOrder (NODE *ptr)
    
     postOrder (ptr->left);
     postOrder (ptr->right);
-    printf ("freeing node %3i \n", ptr->id);
+    printf ("%3i .", ptr->id);
     free (ptr);
 }
 
