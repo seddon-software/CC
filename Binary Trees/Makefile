@@ -1,4 +1,4 @@
-CC := clang
+CC := gcc
 WARNINGS := -Wall
 CFLAGS := -g -O0 $(WARNINGS) -std=c11
 SOURCES := $(wildcard *.c)
