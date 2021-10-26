@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f.h
+
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f1.c
+stdio.h
+-
+
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f2.c
+stdio.h
+-
+
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f3.c
+stdio.h
+-
+
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f_main.c
+stdio.h
+-
+f.h
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f.h
+

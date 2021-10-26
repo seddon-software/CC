@@ -1,0 +1,12 @@
+  rm -r build
+  cmake -v -S src -B build
+  cmake --build build
+
+  cd src
+  f1; f2; f3; f4
+
+  cd d1
+  f5; f6; f7; f8
+
+  cd ../d2
+  f9; f10; f11; f12

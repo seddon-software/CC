@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/f4.dir/f4.c.o  -o /home/chris/CMAKE_DEMO/src/f4 

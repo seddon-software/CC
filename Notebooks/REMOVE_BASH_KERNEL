@@ -1,0 +1,5 @@
+# jupyter kernelspec uninstall bash
+
+python -m pip uninstall bash-kernel
+jupyter kernelspec remove bash 
+jupyter kernelspec list

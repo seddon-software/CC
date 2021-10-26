@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/f12.dir/f12.c.o  -o /home/chris/CMAKE_DEMO/src/d2/f12 

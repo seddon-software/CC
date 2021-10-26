@@ -1,0 +1,4 @@
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/build/CMakeFiles/rebuild_cache.dir
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/build/CMakeFiles/edit_cache.dir
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/build/CMakeFiles/g.dir
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/build/CMakeFiles/f.dir

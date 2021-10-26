@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/f6.dir/f6.c.o  -o /home/chris/CMAKE_DEMO/src/d1/f6 

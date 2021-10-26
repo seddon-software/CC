@@ -1,0 +1,5 @@
+python -m pip install bash-kernel --user
+cd $HOME/.local/bin
+python -m bash_kernel.install --user
+jupyter kernelspec list
+

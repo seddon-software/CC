@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/f10.dir/f10.c.o  -o /home/chris/CMAKE_DEMO/src/d2/f10 

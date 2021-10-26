@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/f8.dir/f8.c.o  -o /home/chris/CMAKE_DEMO/src/d1/f8 
