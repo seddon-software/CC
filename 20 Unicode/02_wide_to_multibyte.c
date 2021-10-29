@@ -13,6 +13,7 @@ int main()
     const wchar_t* wstr = L"\u0410\u0411\u0412\u0413\u0414\u0415\u0416\u0417\u0418\u0419\u041A\u041B";
     char mbstr[32];
     int bytesConverted = wcstombs(mbstr, wstr, 32);
+    printf("Number of bytes converted: %i\n", bytesConverted);
     printf("Russian letters: %s\n", mbstr);
 }
  
