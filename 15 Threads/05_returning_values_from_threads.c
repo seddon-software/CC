@@ -31,6 +31,8 @@ int sum_of_squares(void* v) {
 
 int main(void) {
     thrd_t t1, t2, t3;
+
+    // allocate storage on the heap (accessible by all threads)
     long* pResult1 = malloc(sizeof(long));
     long* pResult2 = malloc(sizeof(long));
     long* pResult3 = malloc(sizeof(long));
@@ -46,6 +48,8 @@ int main(void) {
 
     long result = *pResult1 + *pResult2 + *pResult3;
     printf("sum of squares = %li\n", result);
+
+    // release storage on heap 
     free(pResult1);
     free(pResult2);
     free(pResult3);

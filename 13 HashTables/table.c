@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define BINS 29
 typedef struct {
     char key[16];
     int value;
@@ -12,6 +11,67 @@ typedef struct Node {
     Pair pair;
     struct Node* next;
 } Node;
+
+#define FORMAT(p, n, f) #p #n #f
+#define BINS 30
+#define DISPLAY_BINS 16
+
+void display(Node* hashTable[]) {
+    system("clear");
+    const char* format = FORMAT(%, 10, s);
+
+	for(int i = 0; i < DISPLAY_BINS; i++)
+    {
+        Node* ptr = hashTable[i];
+        if(ptr)
+    	    printf(FORMAT(%, 10, i), i);
+        else
+    	    printf(format, " ");
+    }
+    printf("\n");
+	for(int i = 0; i < DISPLAY_BINS; i++)
+    {
+        Node* ptr = hashTable[i];
+        if(ptr)
+    	    printf(format, "|");
+        else
+    	    printf(format, " ");
+    }
+    printf("\n");
+	for(int i = 0; i < DISPLAY_BINS; i++)
+    {
+        Node* ptr = hashTable[i];
+        if(ptr)
+    	    printf(format, "|");
+        else
+    	    printf(format, " ");
+    }
+    printf("\n");
+	for(int i = 0; i < DISPLAY_BINS; i++)
+    {
+        Node* ptr = hashTable[i];
+        if(ptr)
+    	    printf(format, "~");
+        else
+    	    printf(format, " ");
+    }
+    printf("\n");
+	for(int i = 0; i < DISPLAY_BINS; i++)
+    {
+        Node* ptr = hashTable[i];
+        if(ptr)
+        {
+            printf(FORMAT(%, 7, s) ",", ptr->pair.key);
+    	    printf(FORMAT(%, 2, i) "K", ptr->pair.value/1000);
+        }
+        else
+        {
+            printf(format, " ");
+        }
+    }
+	printf("\n");	
+}
+
 
 int getHash(const char* s) {
 
@@ -68,6 +128,7 @@ int main(void) {
     int count = sizeof(names)/sizeof(Pair);
     for(int i = 0; i < count; i++) {
         insert(hashTable, names[i]);
+        display(hashTable);
     }
     printHashTable(hashTable);
 }
