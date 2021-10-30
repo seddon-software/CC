@@ -20,6 +20,5 @@ int main(void)
 	printf("%06.4lf\n", pi);
 	printf("hex: %x\n", x);
 	printf("octal: %o\n", x);
-	
 }
 
