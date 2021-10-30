@@ -4,42 +4,49 @@
 //
 ////////////////////////////////////////////////////////////
 
-#include <pthread.h>
+#include <threads.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-pthread_mutex_t mutex;
+mtx_t mutex;
 
 typedef struct {
     long low;
     long high;
+    long* pResult;
 } RANGE;
 
-void* sum_of_squares(void* v) {
+int sum_of_squares(void* v) {
     RANGE* range = (RANGE*) v;
-    long* pSum = (long*) malloc(sizeof(long));
-    *pSum = 0;
+    // long* pSum = (long*) malloc(sizeof(long));
+    // *pSum = 0;
     for(long i = range->low; i <= range->high; i++) {
-        *pSum += i*i;
+        *range->pResult += i*i;
     }
-    return pSum;
+//    int result = *pSum;
+//    free(pSum);
+    return 0;
 }
 
 int main(void) {
-    pthread_t t1, t2, t3;
-    long *result1;
-    long *result2;
-    long *result3;
+    thrd_t t1, t2, t3;
+    long* pResult1 = malloc(sizeof(long));
+    long* pResult2 = malloc(sizeof(long));
+    long* pResult3 = malloc(sizeof(long));
+    *pResult1 = *pResult2 = *pResult3 = 0;
 
-    pthread_create(&t1, 0, sum_of_squares, (void*) &(RANGE){    1,   100 });
-    pthread_create(&t2, 0, sum_of_squares, (void*) &(RANGE){  101,  1000 });
-    pthread_create(&t3, 0, sum_of_squares, (void*) &(RANGE){ 1001, 10000 });
+    thrd_create(&t1, sum_of_squares, (void*) &(RANGE){    1,   100, pResult1 });
+    thrd_create(&t2, sum_of_squares, (void*) &(RANGE){  101,  1000, pResult2 });
+    thrd_create(&t3, sum_of_squares, (void*) &(RANGE){ 1001, 10000, pResult3 });
 
-    pthread_join(t1, (void**)&result1);
-    pthread_join(t2, (void**)&result2);
-    pthread_join(t3, (void**)&result3);
+    thrd_join(t1, 0);
+    thrd_join(t2, 0);
+    thrd_join(t3, 0);
 
-    long result = *result1 + *result2 + *result3;
+    long result = *pResult1 + *pResult2 + *pResult3;
     printf("sum of squares = %li\n", result);
+    free(pResult1);
+    free(pResult2);
+    free(pResult3);
 }

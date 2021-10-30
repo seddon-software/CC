@@ -11,7 +11,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#include <pthread.h>
+#include <threads.h>
+//#include <pthread.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,7 +29,7 @@ void random_delay()
     nanosleep(&t, NULL);
 }
 
-void* work(void* v) {
+int work(void* v) {
     for (int i = 0; i < 25; i++) {
         random_delay();
         const char* message = (const char*) v;
@@ -42,17 +43,17 @@ int main(void) {
 
     srand(time(NULL));
 
-    pthread_t t1, t2, t3, t4;
+    thrd_t t1, t2, t3, t4;
 
-    pthread_create(&t1, 0, work, (void*) "1");
-    pthread_create(&t2, 0, work, (void*) "2");
-    pthread_create(&t3, 0, work, (void*) "3");
-    pthread_create(&t4, 0, work, (void*) "4");
+    thrd_create(&t1, work, (void*) "1");
+    thrd_create(&t2, work, (void*) "2");
+    thrd_create(&t3, work, (void*) "3");
+    thrd_create(&t4, work, (void*) "4");
 
-    pthread_join(t1, 0);
-    pthread_join(t2, 0);
-    pthread_join(t3, 0);
-    pthread_join(t4, 0);
-
+    int result1, result2, result3, result4;
+    thrd_join(t1, &result1);
+    thrd_join(t2, &result2);
+    thrd_join(t3, &result3);
+    thrd_join(t4, &result4);
     printf("\n");
 }

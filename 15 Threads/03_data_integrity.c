@@ -4,40 +4,40 @@
 //
 ////////////////////////////////////////////////////////////
 
-#include <pthread.h>
+#include <threads.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
-long count1;
+
+long count1;   // unprotected
 long count2;
 
-void* work(void* v) {
+int work(void* v) {
     #define LOOPS 500000
+    mtx_t* pLock = (mtx_t*) v;  
     for (int i = 0; i < LOOPS; i++) {
         count1++;
     }
     for (int i = 0; i < LOOPS; i++) {
-        pthread_mutex_lock(&lock);
+        mtx_lock(pLock);
         count2++;
-        pthread_mutex_unlock(&lock);
+        mtx_unlock(pLock);
     }
     return 0;
 }
 
 int main(void) {
-    #define MAX_THREADS 10
-    pthread_t thread[MAX_THREADS];
+    #define MAX_THREADS 100
+    mtx_t lock;
+    mtx_init(&lock, mtx_plain);
+    thrd_t thread[MAX_THREADS];
 
     for(int i = 0; i < MAX_THREADS; i++) {
-        pthread_mutex_init(&lock, 0);
+        thrd_create(&thread[i], work, (void*) &lock);
     }
     for(int i = 0; i < MAX_THREADS; i++) {
-        pthread_create(&thread[i], 0, work, (void*) NULL);
-    }
-    for(int i = 0; i < MAX_THREADS; i++) {
-        pthread_join(thread[i], 0);
+        thrd_join(thread[i], 0);
     }
 
     printf("count1 = %li\n", count1);
