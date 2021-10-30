@@ -9,11 +9,9 @@
 void inOrder (NODE *ptr)
 {
     if (ptr == NULL) return;
-    printf("");
     fflush(stdout);
     inOrder (ptr->left);
     printf ("%3i .", ptr->id);
-    printf("");
     fflush(stdout);
     inOrder (ptr->right);
 }
@@ -23,13 +21,10 @@ void preOrder (NODE *ptr)
     if (ptr == NULL) return;
    
     printf ("%3i .", ptr->id);
-    printf("");
     fflush(stdout);
     preOrder (ptr->left);
-    printf("");
     fflush(stdout);
     preOrder (ptr->right);
-    printf("");
     fflush(stdout);
 
 }
