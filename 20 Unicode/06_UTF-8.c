@@ -2,24 +2,21 @@
 #include <wchar.h>
 #include <uchar.h>
 #include <locale.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
-#define __STDC_ISO_10646__
 
 mbstate_t ss;    /* set shift state to the initial state */
 
 void print_narrow_info()
 {
-    char32_t russian_Be = 'Б';
+    char32_t russian_Be = U'Б';
 
-    printf("size of char32_t: %i\n", sizeof(char32_t));
+    printf("size of char32_t: %li\n", sizeof(char32_t));
     printf("UTF-8 encoding: %i \n", russian_Be);
 }
 void print_wide_info()
 {
-    wchar_t russian_Be = 'Б';
+    wchar_t russian_Be = L'Б';
 
     wprintf(L"size of wchar_t: %i\n", sizeof(wchar_t));
     wprintf(L"UTF-8 encoding: %i \n", russian_Be);
