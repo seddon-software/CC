@@ -1,7 +1,7 @@
 /*
 Unicode Support
 
-The Unicode standard defines three encoding formats: UTF-8, UTF-16, and UTF-32. Each has advantages 
+The Unicode standard defines several encoding formats, for example: UTF-8, UTF-16, and UTF-32. Each has advantages 
 and disadvantages. Currently, programmers use char to encode UTF-8, unsigned short or wchar_t for 
 UTF-16, and unsigned long or wchar_t for UTF-32. C11 eliminates these hacks by introducing two new 
 datatypes with platform-independent widths: char16_t and char32_t for UTF-16 and UTF-32, respectively 
@@ -9,10 +9,13 @@ datatypes with platform-independent widths: char16_t and char32_t for UTF-16 and
 the u8 prefix for UTF-8 encoded literals. Finally, Unicode conversion functions are declared in <uchar.h>.
 */
 
+#include <wchar.h>
 #include <uchar.h>
 
 int main(void)
 {
-    char16_t c16;
-    char32_t c32;
+    char utf8[] = "ABCDEFG";
+    wchar_t utf32[] = "ABCDEFG";
+    char16_t c16 = 'A';
+    char32_t c32 = 'A';
 }
