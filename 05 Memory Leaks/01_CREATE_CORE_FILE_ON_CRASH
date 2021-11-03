@@ -10,4 +10,4 @@ make
 myfile.exe
 
 # examine core file
-file core*
+file /tmp/core*
