@@ -1,0 +1,7 @@
+echo "now we annotate the cachegrind results with detailed information"
+echo "for more information see: https://valgrind.org/docs/manual/cg-manual.html"
+
+read -p "Hit a key to continue"
+set -v
+cg_annotate cachegrind.out.* | more
+

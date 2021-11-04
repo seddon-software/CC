@@ -32,7 +32,7 @@ void reversePrint (char *name)
     }
 
 /* ----- AFTER RECURSION ----- */
-
     putchar (ch);
+
 }
 

@@ -11,6 +11,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../src)
 
 # add the executables
 file(GLOB F_FILES "f*.c")
-file(GLOB G_FILES "f*.c")
+file(GLOB G_FILES "g*.c")
 add_executable(f ${F_FILES})
 add_executable(g ${G_FILES})

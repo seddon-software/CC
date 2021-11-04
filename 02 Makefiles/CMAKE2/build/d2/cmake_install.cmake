@@ -1,4 +1,4 @@
-# Install script for directory: /home/chris/CMAKE_DEMO/src/d2
+# Install script for directory: /home/chris/home/workspace/CC/02 Makefiles/CMAKE2/src/d2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -28,6 +28,6 @@ int main(void)
     setlocale(LC_ALL, "");
 
     // recall you can only use wide or narrow streams, so comment out one of the next two calls
-    //print_narrow_info();    // gives UTF-8
-    print_wide_info();  // gives UTF-8
+    print_narrow_info();    // gives UTF-8
+    //print_wide_info();  // gives UTF-8
 }

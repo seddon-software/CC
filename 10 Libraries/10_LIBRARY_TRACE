@@ -1,4 +1,5 @@
 set -v
 cd src
-gcc myfile.c -o myfile.exe
-ltrace myfile.exe
+gcc -g myfile.c -o myfile.exe
+ltrace -x printf myfile.exe
+

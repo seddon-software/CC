@@ -95,8 +95,6 @@ void showfile(char *filename) {
 
         printf("%s \t", outstr);
     }
-
     printf("%-20s\n", filename);
-
 }
 

@@ -29,17 +29,22 @@ int main(void)
     int flag = 0;
 
     flag  = BIT0 | BIT4 | BIT8 | BIT12;
+    printf("%04x\n", flag);
     flag |= BIT1 | BIT2 | BIT3;
+    printf("%04x\n", flag);
     flag ^= BIT4 | BIT8 | BIT12;
+    printf("%04x\n", flag);
 
     flag  = BIT0 | BIT4 | BIT8 | BIT12;
     flag &= 0x00ff;
+    printf("%04x\n", flag);
 
     flag  = flag << 1;
     flag  = flag << 1;
     flag  = flag << 1;
     flag  = flag << 1;
     flag  = flag >> 1;
+    printf("%04x\n", flag);
 }
 
 

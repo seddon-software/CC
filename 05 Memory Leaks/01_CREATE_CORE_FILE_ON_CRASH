@@ -1,4 +1,3 @@
-set -v
 # make sure core file gets created
 ulimit -c unlimited
 
@@ -9,5 +8,21 @@ make
 # run file that crashes
 myfile.exe
 
+# remove any local core file
+rm -f core
+
+# on Ubuntu pick up latest core file
+CORE_FILE=$(ls /var/lib/apport/coredump/*core* | tail -1 | sed 's#^.*/var/lib#/var/lib#')
+cp "$CORE_FILE" core
+
+
 # examine core file
-file /tmp/core*
+echo; echo
+read -p 'Examine core file on Ubuntu or Diamond (u/d): ' machine
+if [ ${machine}x = ux ]
+then
+    file core
+else    
+    file /tmp/core*     # Diamond
+fi
+

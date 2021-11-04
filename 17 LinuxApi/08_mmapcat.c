@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/fcntl.h>
-#include <sys/mman.h>
-#include <sys/stat.h>
-#include <unistd.h>
+#include "headers.h"
 
 /*
  * A version of the "cat" program that uses mmap

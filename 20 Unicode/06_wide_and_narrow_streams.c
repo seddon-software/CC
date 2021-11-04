@@ -34,6 +34,7 @@ int main()
     const wchar_t* wideStr = L"АБВГДЕЖЗИЙКЛ";
 
     printf("Narrow string: %s\n", multibyteStr);  // sets narrow orientation
+    wprintf(L"Wide *** string: %ls\n", wideStr); // sets wide orientation
     
     // freopen() is the only way to change the narrow/wide orientation of a stream once it has been 
     // established by an I/O operation or by fwide().  A reopened stream has no orientation

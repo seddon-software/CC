@@ -1,0 +1,11 @@
+echo "cachegrind estimates usage of the CPU caches"
+echo "for more information see: https://valgrind.org/docs/manual/cg-manual.html"
+echo "run cachegrind after you've run valgrind (which we've just done)"
+
+read -p "Hit a key to continue"
+set -v
+gcc -Wall -Wpedantic myfile.c -o myfile.exe
+rm -rf cachegrind.out.* 
+valgrind --tool=cachegrind myfile.exe
+
+

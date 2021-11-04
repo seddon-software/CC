@@ -1,1 +1,1 @@
-/usr/bin/cc    CMakeFiles/g.dir/f1.c.o CMakeFiles/g.dir/f2.c.o CMakeFiles/g.dir/f3.c.o CMakeFiles/g.dir/f_main.c.o  -o "/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/g" 
+/usr/bin/cc    CMakeFiles/g.dir/g1.c.o CMakeFiles/g.dir/g2.c.o CMakeFiles/g.dir/g3.c.o CMakeFiles/g.dir/g_main.c.o  -o "/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/g" 

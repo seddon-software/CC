@@ -56,9 +56,9 @@ int main(void) {
     mtx_init(&lock4, mtx_plain);
 
     thrd_create(&t1, work, (void*) &(PARAMS){"1", &lock1});
-    thrd_create(&t2, work, (void*) &(PARAMS){"2", &lock1});
-    thrd_create(&t3, work, (void*) &(PARAMS){"3", &lock1});
-    thrd_create(&t4, work, (void*) &(PARAMS){"4", &lock1});
+    thrd_create(&t2, work, (void*) &(PARAMS){"2", &lock2});
+    thrd_create(&t3, work, (void*) &(PARAMS){"3", &lock3});
+    thrd_create(&t4, work, (void*) &(PARAMS){"4", &lock4});
 
     thrd_join(t1, 0);
     thrd_join(t2, 0);

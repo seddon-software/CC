@@ -142,7 +142,6 @@ f1.o: f1.c.o
 
 # target to build an object file
 f1.c.o:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f1.c.o
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f1.c.o
 .PHONY : f1.c.o
 
@@ -152,7 +151,6 @@ f1.i: f1.c.i
 
 # target to preprocess a source file
 f1.c.i:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f1.c.i
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f1.c.i
 .PHONY : f1.c.i
 
@@ -162,7 +160,6 @@ f1.s: f1.c.s
 
 # target to generate assembly for a file
 f1.c.s:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f1.c.s
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f1.c.s
 .PHONY : f1.c.s
 
@@ -172,7 +169,6 @@ f2.o: f2.c.o
 
 # target to build an object file
 f2.c.o:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f2.c.o
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f2.c.o
 .PHONY : f2.c.o
 
@@ -182,7 +178,6 @@ f2.i: f2.c.i
 
 # target to preprocess a source file
 f2.c.i:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f2.c.i
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f2.c.i
 .PHONY : f2.c.i
 
@@ -192,7 +187,6 @@ f2.s: f2.c.s
 
 # target to generate assembly for a file
 f2.c.s:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f2.c.s
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f2.c.s
 .PHONY : f2.c.s
 
@@ -202,7 +196,6 @@ f3.o: f3.c.o
 
 # target to build an object file
 f3.c.o:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f3.c.o
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f3.c.o
 .PHONY : f3.c.o
 
@@ -212,7 +205,6 @@ f3.i: f3.c.i
 
 # target to preprocess a source file
 f3.c.i:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f3.c.i
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f3.c.i
 .PHONY : f3.c.i
 
@@ -222,7 +214,6 @@ f3.s: f3.c.s
 
 # target to generate assembly for a file
 f3.c.s:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f3.c.s
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f3.c.s
 .PHONY : f3.c.s
 
@@ -232,7 +223,6 @@ f_main.o: f_main.c.o
 
 # target to build an object file
 f_main.c.o:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f_main.c.o
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f_main.c.o
 .PHONY : f_main.c.o
 
@@ -242,7 +232,6 @@ f_main.i: f_main.c.i
 
 # target to preprocess a source file
 f_main.c.i:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f_main.c.i
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f_main.c.i
 .PHONY : f_main.c.i
 
@@ -252,9 +241,116 @@ f_main.s: f_main.c.s
 
 # target to generate assembly for a file
 f_main.c.s:
-	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/f_main.c.s
 	$(MAKE) -f CMakeFiles/f.dir/build.make CMakeFiles/f.dir/f_main.c.s
 .PHONY : f_main.c.s
+
+g1.o: g1.c.o
+
+.PHONY : g1.o
+
+# target to build an object file
+g1.c.o:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g1.c.o
+.PHONY : g1.c.o
+
+g1.i: g1.c.i
+
+.PHONY : g1.i
+
+# target to preprocess a source file
+g1.c.i:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g1.c.i
+.PHONY : g1.c.i
+
+g1.s: g1.c.s
+
+.PHONY : g1.s
+
+# target to generate assembly for a file
+g1.c.s:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g1.c.s
+.PHONY : g1.c.s
+
+g2.o: g2.c.o
+
+.PHONY : g2.o
+
+# target to build an object file
+g2.c.o:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g2.c.o
+.PHONY : g2.c.o
+
+g2.i: g2.c.i
+
+.PHONY : g2.i
+
+# target to preprocess a source file
+g2.c.i:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g2.c.i
+.PHONY : g2.c.i
+
+g2.s: g2.c.s
+
+.PHONY : g2.s
+
+# target to generate assembly for a file
+g2.c.s:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g2.c.s
+.PHONY : g2.c.s
+
+g3.o: g3.c.o
+
+.PHONY : g3.o
+
+# target to build an object file
+g3.c.o:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g3.c.o
+.PHONY : g3.c.o
+
+g3.i: g3.c.i
+
+.PHONY : g3.i
+
+# target to preprocess a source file
+g3.c.i:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g3.c.i
+.PHONY : g3.c.i
+
+g3.s: g3.c.s
+
+.PHONY : g3.s
+
+# target to generate assembly for a file
+g3.c.s:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g3.c.s
+.PHONY : g3.c.s
+
+g_main.o: g_main.c.o
+
+.PHONY : g_main.o
+
+# target to build an object file
+g_main.c.o:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g_main.c.o
+.PHONY : g_main.c.o
+
+g_main.i: g_main.c.i
+
+.PHONY : g_main.i
+
+# target to preprocess a source file
+g_main.c.i:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g_main.c.i
+.PHONY : g_main.c.i
+
+g_main.s: g_main.c.s
+
+.PHONY : g_main.s
+
+# target to generate assembly for a file
+g_main.c.s:
+	$(MAKE) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/g_main.c.s
+.PHONY : g_main.c.s
 
 # Help Target
 help:
@@ -278,6 +374,18 @@ help:
 	@echo "... f_main.o"
 	@echo "... f_main.i"
 	@echo "... f_main.s"
+	@echo "... g1.o"
+	@echo "... g1.i"
+	@echo "... g1.s"
+	@echo "... g2.o"
+	@echo "... g2.i"
+	@echo "... g2.s"
+	@echo "... g3.o"
+	@echo "... g3.i"
+	@echo "... g3.s"
+	@echo "... g_main.o"
+	@echo "... g_main.i"
+	@echo "... g_main.s"
 .PHONY : help
 
 

@@ -15,8 +15,10 @@ int main(void)
 {
     int a[][3] = {{1, 3, 5}, { 2, 4, 6}};
     int (*p)[3];
-    p = a;
+    p = &a[0];
     p[0][0] = -1;
+    (*p)[1] = -2;
+    *((*p)+2) = -3;
 
     typedef int(*FP)(int, double);
     int (*g)(int, double);

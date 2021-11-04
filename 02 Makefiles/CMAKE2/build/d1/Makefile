@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chris/CMAKE_DEMO/src
+CMAKE_SOURCE_DIR = "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chris/CMAKE_DEMO/build
+CMAKE_BINARY_DIR = "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/chris/CMAKE_DEMO/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/chris/CMAKE_DEMO/build/CMakeFiles /home/chris/CMAKE_DEMO/build/d1/CMakeFiles/progress.marks
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f CMakeFiles/Makefile2 d1/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chris/CMAKE_DEMO/build/CMakeFiles 0
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build/CMakeFiles" "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build/d1/CMakeFiles/progress.marks"
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f CMakeFiles/Makefile2 d1/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f CMakeFiles/Makefile2 d1/clean
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f CMakeFiles/Makefile2 d1/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f CMakeFiles/Makefile2 d1/preinstall
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f CMakeFiles/Makefile2 d1/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f CMakeFiles/Makefile2 d1/preinstall
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f CMakeFiles/Makefile2 d1/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/chris/CMAKE_DEMO/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 d1/CMakeFiles/f8.dir/rule:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f CMakeFiles/Makefile2 d1/CMakeFiles/f8.dir/rule
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f CMakeFiles/Makefile2 d1/CMakeFiles/f8.dir/rule
 .PHONY : d1/CMakeFiles/f8.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ f8: d1/CMakeFiles/f8.dir/rule
 
 # fast build rule for target.
 f8/fast:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f8.dir/build.make d1/CMakeFiles/f8.dir/build
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f8.dir/build.make d1/CMakeFiles/f8.dir/build
 .PHONY : f8/fast
 
 # Convenience name for target.
 d1/CMakeFiles/f6.dir/rule:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f CMakeFiles/Makefile2 d1/CMakeFiles/f6.dir/rule
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f CMakeFiles/Makefile2 d1/CMakeFiles/f6.dir/rule
 .PHONY : d1/CMakeFiles/f6.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ f6: d1/CMakeFiles/f6.dir/rule
 
 # fast build rule for target.
 f6/fast:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f6.dir/build.make d1/CMakeFiles/f6.dir/build
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f6.dir/build.make d1/CMakeFiles/f6.dir/build
 .PHONY : f6/fast
 
 # Convenience name for target.
 d1/CMakeFiles/f7.dir/rule:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f CMakeFiles/Makefile2 d1/CMakeFiles/f7.dir/rule
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f CMakeFiles/Makefile2 d1/CMakeFiles/f7.dir/rule
 .PHONY : d1/CMakeFiles/f7.dir/rule
 
 # Convenience name for target.
@@ -152,12 +152,12 @@ f7: d1/CMakeFiles/f7.dir/rule
 
 # fast build rule for target.
 f7/fast:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f7.dir/build.make d1/CMakeFiles/f7.dir/build
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f7.dir/build.make d1/CMakeFiles/f7.dir/build
 .PHONY : f7/fast
 
 # Convenience name for target.
 d1/CMakeFiles/f5.dir/rule:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f CMakeFiles/Makefile2 d1/CMakeFiles/f5.dir/rule
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f CMakeFiles/Makefile2 d1/CMakeFiles/f5.dir/rule
 .PHONY : d1/CMakeFiles/f5.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ f5: d1/CMakeFiles/f5.dir/rule
 
 # fast build rule for target.
 f5/fast:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f5.dir/build.make d1/CMakeFiles/f5.dir/build
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f5.dir/build.make d1/CMakeFiles/f5.dir/build
 .PHONY : f5/fast
 
 f5.o: f5.c.o
@@ -176,7 +176,7 @@ f5.o: f5.c.o
 
 # target to build an object file
 f5.c.o:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f5.dir/build.make d1/CMakeFiles/f5.dir/f5.c.o
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f5.dir/build.make d1/CMakeFiles/f5.dir/f5.c.o
 .PHONY : f5.c.o
 
 f5.i: f5.c.i
@@ -185,7 +185,7 @@ f5.i: f5.c.i
 
 # target to preprocess a source file
 f5.c.i:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f5.dir/build.make d1/CMakeFiles/f5.dir/f5.c.i
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f5.dir/build.make d1/CMakeFiles/f5.dir/f5.c.i
 .PHONY : f5.c.i
 
 f5.s: f5.c.s
@@ -194,7 +194,7 @@ f5.s: f5.c.s
 
 # target to generate assembly for a file
 f5.c.s:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f5.dir/build.make d1/CMakeFiles/f5.dir/f5.c.s
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f5.dir/build.make d1/CMakeFiles/f5.dir/f5.c.s
 .PHONY : f5.c.s
 
 f6.o: f6.c.o
@@ -203,7 +203,7 @@ f6.o: f6.c.o
 
 # target to build an object file
 f6.c.o:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f6.dir/build.make d1/CMakeFiles/f6.dir/f6.c.o
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f6.dir/build.make d1/CMakeFiles/f6.dir/f6.c.o
 .PHONY : f6.c.o
 
 f6.i: f6.c.i
@@ -212,7 +212,7 @@ f6.i: f6.c.i
 
 # target to preprocess a source file
 f6.c.i:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f6.dir/build.make d1/CMakeFiles/f6.dir/f6.c.i
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f6.dir/build.make d1/CMakeFiles/f6.dir/f6.c.i
 .PHONY : f6.c.i
 
 f6.s: f6.c.s
@@ -221,7 +221,7 @@ f6.s: f6.c.s
 
 # target to generate assembly for a file
 f6.c.s:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f6.dir/build.make d1/CMakeFiles/f6.dir/f6.c.s
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f6.dir/build.make d1/CMakeFiles/f6.dir/f6.c.s
 .PHONY : f6.c.s
 
 f7.o: f7.c.o
@@ -230,7 +230,7 @@ f7.o: f7.c.o
 
 # target to build an object file
 f7.c.o:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f7.dir/build.make d1/CMakeFiles/f7.dir/f7.c.o
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f7.dir/build.make d1/CMakeFiles/f7.dir/f7.c.o
 .PHONY : f7.c.o
 
 f7.i: f7.c.i
@@ -239,7 +239,7 @@ f7.i: f7.c.i
 
 # target to preprocess a source file
 f7.c.i:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f7.dir/build.make d1/CMakeFiles/f7.dir/f7.c.i
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f7.dir/build.make d1/CMakeFiles/f7.dir/f7.c.i
 .PHONY : f7.c.i
 
 f7.s: f7.c.s
@@ -248,7 +248,7 @@ f7.s: f7.c.s
 
 # target to generate assembly for a file
 f7.c.s:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f7.dir/build.make d1/CMakeFiles/f7.dir/f7.c.s
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f7.dir/build.make d1/CMakeFiles/f7.dir/f7.c.s
 .PHONY : f7.c.s
 
 f8.o: f8.c.o
@@ -257,7 +257,7 @@ f8.o: f8.c.o
 
 # target to build an object file
 f8.c.o:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f8.dir/build.make d1/CMakeFiles/f8.dir/f8.c.o
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f8.dir/build.make d1/CMakeFiles/f8.dir/f8.c.o
 .PHONY : f8.c.o
 
 f8.i: f8.c.i
@@ -266,7 +266,7 @@ f8.i: f8.c.i
 
 # target to preprocess a source file
 f8.c.i:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f8.dir/build.make d1/CMakeFiles/f8.dir/f8.c.i
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f8.dir/build.make d1/CMakeFiles/f8.dir/f8.c.i
 .PHONY : f8.c.i
 
 f8.s: f8.c.s
@@ -275,7 +275,7 @@ f8.s: f8.c.s
 
 # target to generate assembly for a file
 f8.c.s:
-	cd /home/chris/CMAKE_DEMO/build && $(MAKE) -f d1/CMakeFiles/f8.dir/build.make d1/CMakeFiles/f8.dir/f8.c.s
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(MAKE) -f d1/CMakeFiles/f8.dir/build.make d1/CMakeFiles/f8.dir/f8.c.s
 .PHONY : f8.c.s
 
 # Help Target
@@ -313,6 +313,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/chris/CMAKE_DEMO/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

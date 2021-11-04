@@ -1,9 +1,4 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include <sys/stat.h>
-#include <unistd.h>
-#include <fcntl.h>
+#include "headers.h"
 
 int createFile(const char* fileName) {
 	// create new file with rwx permission

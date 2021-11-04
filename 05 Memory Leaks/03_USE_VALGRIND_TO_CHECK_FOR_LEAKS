@@ -1,0 +1,8 @@
+echo "we are going to run myfile.exe"
+echo "    it will create memory leaks" 
+echo "    valgrind will report on these leaks"
+read -p "hit a key to proceed"
+
+gcc -g -O0 -Wall -Wpedantic myfile.c -o myfile.exe
+set -v
+valgrind --leak-check=yes myfile.exe

@@ -1,29 +1,26 @@
 #include "headers.h"
 
+void doFile(int);
+
 /*
  * Program to emulate functionality of cat, but avoid
  * dumping directories etc.
  */
+
 #define MAXBUF 1024
 
 int main(int argc, char *argv[]) {
 	int fd;
-	int i;
-	void doFile(int);
 
-	/*
-		* Process each argument one at a time, open the file and
-		* then copy its contents to stdout.
-		*/
+	// open the file and then copy its contents to stdout.
+
 	fd = open("headers.h", O_RDONLY, 0);
-
-	if (fd < 0) {
-		perror(argv[i]);
+	if (fd < 0) {  // on failure
+		perror(argv[0]);
 		exit(1);
 	}
 
 	doFile(fd);
-
 	close(fd);
 
 	return 0;
@@ -38,11 +35,7 @@ void doFile(int fd) {
 	int n;
 	struct stat sbuf;
 
-	/*
-	 * Before dumping the fd, check it's not a directory,
-	 * we shouldn't really allow directories to be shown
-	 * in this way...
-	 */
+	// before dumping the fd, check it's not a directory
 	if (fstat(fd, &sbuf) < 0) {
 		perror("stat");
 		return;

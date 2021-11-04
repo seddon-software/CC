@@ -40,6 +40,6 @@ int main(void)
     printf("%i\n", p[2](12, quadIt));
 
     int (*q)(int, int(*)(int));
-    q = &f1;
+    q = p[0];     //    q = &f1;
     printf("%i\n", q(10, doubleIt));
 }

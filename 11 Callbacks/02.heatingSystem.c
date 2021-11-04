@@ -2,24 +2,24 @@
 
 #define MAX_EVENTS 16
 
-void switch_on(char* system, int t)
+void switch_on(const char* system, int t)
 {
     printf("switching on %s at t=%i\n", system, t);
 }
 
-void switch_off(char* system, int t)
+void switch_off(const char* system, int t)
 {
     printf("switching off %s at t=%i\n", system, t);
 }
 
-void service(char* system, int t)
+void service(const char* system, int t)
 {
     printf("servicing %s at t=%i\n", system, t);
 }
 
 typedef struct {
-    void (*fp)(char*, int);
-    char* s;
+    void (*fp)(const char*, int);   // fp is a pointer to a function with 2 params (char*, int) returning void
+    const char* s;
 } TimerController;
 
 int main()
@@ -42,12 +42,5 @@ int main()
             c.fp(tc[t].s, t);
         }
     }
-/*
-	cout << "start of simulation";
-	while(controller.tick());
-	cout << endl << "end of simulation" << endl;
-
-	return 0;
-*/
 }
 

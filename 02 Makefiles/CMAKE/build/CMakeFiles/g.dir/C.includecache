@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f.h
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/g.h
 
-/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f1.c
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/g1.c
 stdio.h
 -
 
-/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f2.c
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/g2.c
 stdio.h
 -
 
-/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f3.c
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/g3.c
 stdio.h
 -
 
-/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f_main.c
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/g_main.c
 stdio.h
 -
-f.h
-/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/f.h
+g.h
+/home/chris/home/workspace/CC/02 Makefiles/CMAKE/src/g.h
 

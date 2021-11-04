@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int f1(int x, int (*fn)(int))
+int f1(int x, int (*fn)(int))  // f1 is a function with 2 params, x=int, fn=pointer to a function of(int) returning int 
 {
     return x + fn(x);
 } 

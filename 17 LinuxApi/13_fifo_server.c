@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
 #include "headers.h"
-
 #define MAXBUF 256
 
 int main() {

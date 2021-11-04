@@ -1,0 +1,17 @@
+echo "we are going to run gdb with the following command:"
+echo 'gdb -q -n -ex "b main" -ex "bt" -tui -se=myfile.exe -c core'
+echo 'this will run the backtrace command (bt) after gdb starts'
+read -p "hit a key to proceed"
+
+# remove local core file
+rm -rf core
+
+# on Ubuntu pick up latest core file
+CORE_FILE=$(ls /var/lib/apport/coredump/*core* | tail -1 | sed 's#^.*/var/lib#/var/lib#')
+echo $CORE_FILE
+cp "$CORE_FILE" core
+ls -l core
+
+# run gdb and use the 'bt' command to get a backtrace
+gdb -q -n -ex "b main" -ex "bt" -tui -se=myfile.exe -c core
+

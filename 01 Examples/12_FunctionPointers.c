@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void (*button[3])(void);
+void (*button[3])(void);   // button is array of 3 (because of precedence table) of pointers to functions of (void) returning void
 
 
 void PaintItBlack(void)
@@ -34,9 +34,9 @@ void PressRightButton(void)
 
 int main(void)
 {
-    button[0] = PaintItBlack;
-    button[1] = SwapButtons;
-    button[2] = PaintItWhite;
+    button[0] = &PaintItBlack;
+    button[1] = &SwapButtons;
+    button[2] = &PaintItWhite;
 
 	PressLeftButton();
 	PressRightButton();

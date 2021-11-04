@@ -52,6 +52,9 @@ int main(void)
     int (*(*r)[3])(int);
     // an array of 3 pointers to functions
     int (*a[3])(int) = {doubleIt, tripleIt, quadIt};
-    r = &a;         // the & is required
+    r = &a;         // the & is required to suppress a warning
     printf("%i\n", r[0][0](5));
+    printf("%i\n", (*r)[0](5));
+    printf("%i\n", (*(*r))(5));
+    printf("%i\n", (**r)(5));
 }

@@ -3,6 +3,7 @@
   "configurations": [
     {
       "name": "make all C files in folder and debug",
+      "includePath":"/usr/include/**",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/all.exe",

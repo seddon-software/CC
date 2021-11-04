@@ -12,7 +12,8 @@ int main(void)
 {
 	int x = 107;
 	double pi = 3.14159;
-	printf("text\n");
+	printf("text");
+	fflush(stdout);
 	puts("text\n");
 	printf("special characters:%%\\\n");
 	printf("integer: %05i\n", x);

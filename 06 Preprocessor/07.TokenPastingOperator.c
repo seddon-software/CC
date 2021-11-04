@@ -1,3 +1,5 @@
+// paste two tokens together with ##
+
 #define DEFINE_CUBE(TYPE)                \
     TYPE CubeOf##TYPE (TYPE number)      \
     {                                    \

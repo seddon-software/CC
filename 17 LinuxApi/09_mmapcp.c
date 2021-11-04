@@ -1,20 +1,25 @@
 #include "headers.h"
-#include <sys/mman.h>
 
 #define NOMAP ((void*) -1)
 #define PERMS (S_IRWXU|S_IRWXG|S_IRWXO)
 
-#define SOURCE "data/source"
-#define DESTINATION "data/destination"
 
-int main(void) {
+int main(int argc, char *argv[]) {
     int target, source, len;
     char *src, *dest;
     struct stat statbuf;
 
-    source = open(SOURCE, O_RDONLY);
+    /*
+     * Usage check - allow just one file at a time
+     */
+    if (argc != 3) {
+        fprintf(stderr, "Usage: %s src dest\n", argv[0]);
+        exit(1);
+    }
+
+    source = open(argv[1], O_RDONLY);
     if (source < 0) {
-        perror(SOURCE);
+        perror(argv[1]);
         exit(1);
     }
 
@@ -25,9 +30,9 @@ int main(void) {
 
     len = statbuf.st_size;
 
-    target = open(DESTINATION, O_RDWR | O_CREAT, statbuf.st_mode & PERMS);
+    target = open(argv[2], O_RDWR | O_CREAT, statbuf.st_mode & PERMS);
     if (target < 0) {
-        perror(DESTINATION);
+        perror(argv[2]);
         exit(1);
     }
 

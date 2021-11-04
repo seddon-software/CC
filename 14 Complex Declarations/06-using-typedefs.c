@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// use typedefs to simplify notation
+typedef int F2(int);
+typedef int F1(int, F2);
+
+F1 f1;    // function prototypes (go in header file)
+F1 f2;
+F1 f3;
+
+
 int f1(int x, int (*fn)(int))
 {
     return x + fn(x);
@@ -31,9 +40,6 @@ int quadIt(int x)
     return 4 * x;
 }
 
-// use typedefs to simplify notation
-typedef int F1(int x, int (*)(int));
-typedef int F2(int x);
 
 
 int main(void)
@@ -48,7 +54,7 @@ int main(void)
     printf("%i\n", q(10, doubleIt));
 
     F2 *(*r)[3];
-    int (*a[3])(int) = {doubleIt, tripleIt, quadIt};
+    F2 *a[3] = {doubleIt, tripleIt, quadIt};
     r = &a;         // the & is required
     printf("%i\n", r[0][0](5));
 }

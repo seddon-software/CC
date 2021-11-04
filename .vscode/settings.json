@@ -37,6 +37,7 @@
         "socket.h": "c",
         "stdbool.h": "c",
         "linklist.h": "c",
-        "trees.h": "c"
+        "trees.h": "c",
+        "signal.h": "c"
     }
 }

@@ -15,7 +15,8 @@ jmp_buf context;
 void f3()
 {
     printf("Please enter a number: ");
-    scanf("%lf", &x);
+    // scanf("%lf", &x);
+    x = -99;
     if(x < 0) longjmp(context, 5);
     printf("Square root of x = %8.4lf\n", sqrt(x));
 }

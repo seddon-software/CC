@@ -5,7 +5,7 @@
 #define DM  3
 
 // command line:
-//      gcc -E -DUSD=1 02.ConditionalCompilation.c
+//      gcc -E -DCURRENCY=USD 02.ConditionalCompilation.c
 int main (void)
 {
 

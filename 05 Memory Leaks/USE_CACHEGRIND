@@ -1,6 +1,0 @@
-gcc -Wall -Wpedantic myfile.c -o myfile.exe
-rm cachegrind.out.* 
-valgrind --tool=cachegrind myfile.exe
-
-
-

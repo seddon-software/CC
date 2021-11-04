@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "headers.h"
 
 int main(void) {
     char buffer[1024];

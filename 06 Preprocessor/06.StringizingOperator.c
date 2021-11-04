@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define QUOTE(P1) #P1
+#define QUOTE(P1) #P1       // quote parameter
 
 int main (void)
 {

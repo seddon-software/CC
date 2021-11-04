@@ -1,3 +1,5 @@
+# https://www.gnu.org/software/make/manual/
+
 CC := gcc
 WARNINGS := -Wall
 CFLAGS := -g -O0 $(WARNINGS) -std=c11 

@@ -15,7 +15,7 @@ int list[SIZE] = {
 int main(void)
 {
 	int i;
-	qsort(list, 24, sizeof( int), (int (*)()) cmp);
+	qsort(list, 24, sizeof(int), (int (*)()) cmp);
 	for(i = 0; i < 24; i++)
 	{
 		printf("%3i", list[i]);

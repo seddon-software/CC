@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/chris/CMAKE_DEMO/src/f3"
-  "/home/chris/CMAKE_DEMO/src/f3.pdb"
+  "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/src/f3"
+  "/home/chris/home/workspace/CC/02 Makefiles/CMAKE2/src/f3.pdb"
   "CMakeFiles/f3.dir/f3.c.o"
 )
 
