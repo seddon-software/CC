@@ -22,10 +22,22 @@
     //     "typeinfo": "c",
     //     "algorithm": "c"
     // },
+    "terminal.integrated.fontSize": 12,
     "editor.minimap.enabled": false,
-    "editor.fontSize": 18,
+    "editor.fontSize": 12,
     "files.exclude": {
         "**/*.o": true,
         "**/*.exe": true
+    },
+    "jupyter.jupyterServerType": "local",
+    "python.pythonPath": "/home/chris/anaconda3/bin/python",
+    "cmake.configureOnOpen": false,
+    "files.associations": {
+        "*.exe": "nm",
+        "socket.h": "c",
+        "stdbool.h": "c",
+        "linklist.h": "c",
+        "trees.h": "c",
+        "signal.h": "c"
     }
 }

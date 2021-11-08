@@ -12,13 +12,13 @@ typedef struct Node {
     struct Node* next;
 } Node;
 
-#define BINS 30
+#define BINS 40
 
 int getHash(const char* s) {
 
     int hash = 0;
     for(int i = 0; i < strlen(s); i++) {
-        hash += s[i] * s[i] * (i + 7); 
+        hash += s[i] * s[(i+3)%(strlen(s)-1)] * (i + 7); 
     }
     return hash % BINS;
 }
@@ -56,7 +56,7 @@ void printHashTable(Node* hashTable[]) {
     }
 }
 int main(void) {
-    system("clear");
+    //system("clear");
     Node* hashTable[BINS] = {NULL};
     Pair names[] = {{"John",  42000},
                     {"Jon",   21000},

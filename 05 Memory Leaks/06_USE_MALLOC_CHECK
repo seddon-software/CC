@@ -5,5 +5,5 @@ gcc -g -Wall -Wpedantic demo_malloc_check.c -o demo_malloc_check.exe
 
 
 # run file that crashes
-myfile.exe
+demo_malloc_check.exe
 
