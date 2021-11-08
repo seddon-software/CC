@@ -1,5 +1,0 @@
-= Start
-@ /lib/x86_64-linux-gnu/libc.so.6:(_IO_file_doallocate+0x94)[0x7f738a5b0e84] + 0x55f5f44c3410 0x400
-@ myfile2.exe:[0x55f5f25351ff] + 0x55f5f44c3820 0x78
-@ myfile2.exe:[0x55f5f25352d4] + 0x55f5f44c38b0 0x50
-@ /lib/x86_64-linux-gnu/libc.so.6:[0x7f738a6c796c] - 0x55f5f44c3410

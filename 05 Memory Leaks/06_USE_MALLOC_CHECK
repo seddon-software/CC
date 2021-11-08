@@ -1,7 +1,7 @@
 set -v
 # compile
 export MALLOC_CHECK_=3
-gcc -ggdb -Wall -Wpedantic myfile.c -o myfile.exe
+gcc -g -Wall -Wpedantic demo_malloc_check.c -o demo_malloc_check.exe
 
 
 # run file that crashes

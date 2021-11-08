@@ -4,12 +4,9 @@ set -v
 
 # compile
 export MALLOC_CHECK_=3
-gcc -g -Wall -pedantic myfile2.c -o myfile2.exe
+gcc -g -Wall -pedantic demo_mtrace.c -o demo_mtrace.exe
 
 # run the program
-export MALLOC_TRACE=mtrace.txt
-myfile2.exe
-mtrace myfile2.exe mtrace.txt
-cat mtrace.txt
-mtrace mtrace.txt
-ls -l
+export MALLOC_TRACE=demo_mtrace.log
+demo_mtrace.exe
+mtrace demo_mtrace.exe demo_mtrace.log
