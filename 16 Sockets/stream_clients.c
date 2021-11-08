@@ -29,7 +29,7 @@ void connectToServer(int sockfd, const char* ip, int port)
     int n;
 
     addr.sin_family = AF_INET;
-    addr.sin_port = port; //htons(port);
+    addr.sin_port = htons(port);
     addr.sin_addr.s_addr = inet_addr(ip);
 
     n = connect(sockfd, (struct sockaddr*) &addr, sizeof(addr));

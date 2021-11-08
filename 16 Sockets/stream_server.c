@@ -42,7 +42,7 @@ struct sockaddr_in bindToAddress(int sockfd, int port)
         perror("setsockopt(SO_REUSEADDR) failed");
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
-    addr.sin_port = port; //htons(2000);
+    addr.sin_port = htons(port);
     addr.sin_addr.s_addr = INADDR_ANY;
 
     if (bind(sockfd, (struct sockaddr*) &addr, sizeof(addr)) < 0) {
