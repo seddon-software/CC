@@ -9,6 +9,7 @@
 #include <netdb.h>
 
 #define MAXBUF 1024
+#define PORT 7002
 #define CLEAR(S) memset((void*)&S, '\0', sizeof(S))
 
 int createSocket()
@@ -28,7 +29,7 @@ void connectToServer(int sockfd, const char* ip, int port)
     int n;
 
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(port);
+    addr.sin_port = port; //htons(port);
     addr.sin_addr.s_addr = inet_addr(ip);
 
     n = connect(sockfd, (struct sockaddr*) &addr, sizeof(addr));
@@ -54,14 +55,14 @@ void writeToServer(int sockfd)
 int main(int argc, char *argv[]) {
     int sockfd;
     int pid;
-    int n;
+//    int n;
 
     for(int i = 0; i < 5; i++)
     {
         pid = fork();
         if(pid > 0) exit(0);  // parent exits, child continues
         sockfd = createSocket();
-        connectToServer(sockfd, "127.0.0.1", 2001);
+        connectToServer(sockfd, "127.0.0.1", PORT);
         writeToServer(sockfd);
     }
 }

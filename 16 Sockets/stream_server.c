@@ -11,6 +11,7 @@
 #include <arpa/inet.h>
 
 #define MAXBUF 1024
+#define PORT 7002
 
 void CHLDhandler(int sig) {
     while (waitpid(0, NULL, WNOHANG) > 0) {
@@ -41,7 +42,7 @@ struct sockaddr_in bindToAddress(int sockfd, int port)
         perror("setsockopt(SO_REUSEADDR) failed");
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(2000);
+    addr.sin_port = port; //htons(2000);
     addr.sin_addr.s_addr = INADDR_ANY;
 
     if (bind(sockfd, (struct sockaddr*) &addr, sizeof(addr)) < 0) {
@@ -89,7 +90,7 @@ int main(int argc, char *argv[]) {
     signal(SIGTERM, TERMhandler);
 
     sockfd = createSocket();
-    addr = bindToAddress(sockfd, 2001);
+    addr = bindToAddress(sockfd, PORT);
     setupListenBuffer(sockfd);
 
     for (;;) { // Loop waiting for requests and servicing them
