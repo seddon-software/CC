@@ -4,8 +4,8 @@ echo "run cachegrind after you've run valgrind (which we've just done)"
 
 read -p "Hit a key to continue"
 set -v
-gcc -Wall -Wpedantic myfile.c -o myfile.exe
+gcc -Wall -Wpedantic demo_working_file.c -o demo_working_file.exe
 rm -rf cachegrind.out.* 
-valgrind --tool=cachegrind myfile.exe
+valgrind --tool=cachegrind demo_working_file.exe
 
 

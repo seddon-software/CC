@@ -5,13 +5,22 @@ read -p "hit a key to proceed"
 
 # remove local core file
 rm -rf core
+set -x
 
 # on Ubuntu pick up latest core file
 CORE_FILE=$(ls /var/lib/apport/coredump/*core* | tail -1 | sed 's#^.*/var/lib#/var/lib#')
 echo $CORE_FILE
-cp "$CORE_FILE" core
-ls -l core
+
+
+# examine core file
+Ubuntu=$(uname -a | sed 's/.*Ubuntu.*/Ubuntu/')
+if [ ${Ubuntu}x = Ubuntux ]  # Ubuntu
+then
+    # on Ubuntu pick up latest core file
+    CORE_FILE=$(ls /var/lib/apport/coredump/*core* | tail -1 | sed 's#^.*/var/lib#/var/lib#')
+else    
+    CORE_FILE=/tmp/core*     # Diamond
+fi
 
 # run gdb and use the 'bt' command to get a backtrace
-gdb -q -n -ex "b main" -ex "bt" -tui -se=myfile.exe -c core
-
+gdb -q -n -ex "b main" -ex "bt" -tui -se=demo_corefile.exe -c "$CORE_FILE"

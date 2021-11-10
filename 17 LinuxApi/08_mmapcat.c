@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
     if (!S_ISREG(sbuf.st_mode)) {
-        fprintf(stderr, "%s: not a reagular file\n", argv[1]);
+        fprintf(stderr, "%s: not a regular file\n", argv[1]);
         exit(1);
     }
     length = sbuf.st_size;

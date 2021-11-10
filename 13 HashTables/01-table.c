@@ -56,7 +56,7 @@ void printHashTable(Node* hashTable[]) {
     }
 }
 int main(void) {
-    //system("clear");
+    system("clear");
     Node* hashTable[BINS] = {NULL};
     Pair names[] = {{"John",  42000},
                     {"Jon",   21000},

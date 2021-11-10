@@ -3,6 +3,6 @@ echo "    it will create memory leaks"
 echo "    valgrind will report on these leaks"
 read -p "hit a key to proceed"
 
-gcc -g -O0 -Wall -Wpedantic myfile.c -o myfile.exe
+gcc -g -O0 -Wall -Wpedantic demo_malloc_check.c -o demo_malloc_check.exe
 set -v
-valgrind --leak-check=yes myfile.exe
+valgrind --leak-check=yes demo_malloc_check.exe

@@ -6,21 +6,21 @@ make clean
 make
 
 # run file that crashes
-myfile.exe
+demo_corefile.exe
 
 # remove any local core file
 rm -f core
 
-# on Ubuntu pick up latest core file
-CORE_FILE=$(ls /var/lib/apport/coredump/*core* | tail -1 | sed 's#^.*/var/lib#/var/lib#')
-cp "$CORE_FILE" core
 
 
 # examine core file
-echo; echo
-read -p 'Examine core file on Ubuntu or Diamond (u/d): ' machine
-if [ ${machine}x = ux ]
+echo; echo examine core file
+Ubuntu=$(uname -a | sed 's/.*Ubuntu.*/Ubuntu/')
+if [ ${Ubuntu}x = Ubuntux ]
 then
+    # on Ubuntu pick up latest core file
+    CORE_FILE=$(ls /var/lib/apport/coredump/*core* | tail -1 | sed 's#^.*/var/lib#/var/lib#')
+    cp "$CORE_FILE" core
     file core
 else    
     file /tmp/core*     # Diamond
