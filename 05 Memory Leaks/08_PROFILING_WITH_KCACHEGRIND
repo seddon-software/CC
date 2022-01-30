@@ -2,12 +2,9 @@ set -v
 # Use valgrind to set up call statistics
 # Use kcachegrind to display statistic in a browser window
 
-#see: https://kcachegrind.github.io/html/Home.html
-
-cd src
 rm callgrind.out.*
-gcc myfile.c -lm -o myfile.exe
-valgrind --tool=callgrind myfile.exe
+gcc -g demo_kcachegrind.c -lm -o demo_kcachegrind.exe
+valgrind --tool=callgrind demo_kcachegrind.exe
 kcachegrind
 
 
