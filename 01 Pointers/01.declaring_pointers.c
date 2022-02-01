@@ -25,14 +25,16 @@ int main(void)
     int* px;
     px = &x;
 
-    int y = 200;
-    int* py = &y;
-
-
     printf("x = %i\n", x);
     printf("*px = %i\n", *px);
 
     printf("&x = %p\n", &x);
     printf("px = %p\n", px);
-    
+
+    int y = 200;
+    int* py = &y;
+
+    printf("y = %i\n", y);
+    printf("*py = %i\n", *py);
+
 }

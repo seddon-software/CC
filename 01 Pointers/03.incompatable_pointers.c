@@ -14,8 +14,8 @@
 
 int main(void)
 {
-    printf("sizeof double = %i\n", sizeof(double));
-    printf("sizeof int = %i\n", sizeof(int));
+    printf("sizeof double = %li\n", sizeof(double));
+    printf("sizeof int = %li\n", sizeof(int));
     int x = 100;
     double y = 3.14159;
     printf("&x = %p\n", &x);
