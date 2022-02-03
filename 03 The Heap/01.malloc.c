@@ -9,7 +9,7 @@ int main(void)
     
     if(p1) {
         for(int n=0; n<4; ++n) // populate the array
-            p1[n] = n*n;
+            p1[n] = (n+1)*(n+1);
         for(int n=0; n<4; ++n) // print it back out
             printf("p1[%d] == %d\n", n, p1[n]);
     }
