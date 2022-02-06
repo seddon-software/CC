@@ -1,6 +1,6 @@
 CC := gcc
 WARNINGS := -Wall
-CFLAGS := -g -O0 $(WARNINGS) -std=c11 
+CFLAGS := -g $(WARNINGS) -std=c11 
 LFLAGS := -lm  -pthread
 SOURCES := $(wildcard *.c)
 EXECUTABLES := $(SOURCES:.c=.exe)

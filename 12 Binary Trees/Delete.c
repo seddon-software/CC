@@ -46,8 +46,8 @@ NODE* findSuccessorNode(NODE* target)
 
     while(parent->left != NULL)
     {
-	oldParent = parent;
-	parent = goLeft(parent);
+        oldParent = parent;
+        parent = goLeft(parent);
     }
 
     return oldParent;

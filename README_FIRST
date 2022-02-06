@@ -1,4 +1,4 @@
-25 October 2021
+6 February 2022
 
 Timings:
 ========
@@ -9,7 +9,14 @@ Timings:
 
 If you are on a Diamond machine, setup vscode with:
     module load vscode/1.42.1
-    
+
+You also need to setup your C/C++ compiler:
+    module load gcc/9.2.0
+
+The shared library examples on this course are available as a Juypter Notebook.  You will need to install
+Python 3.7 or better to get these to work:
+    module load python/3.7
+
 To clone this repository:
     cd 
     git clone https://github.com/seddon-software/CC.git
@@ -19,11 +26,10 @@ To clone this repository:
 If you've downloaded the examples already and you want to get updates:
     git pull
 
-If this fails because you've made changes to some of the code, then stash your changes:
+If this fails because you've made changes to some of the code, then stash your changes before you pull:
     git stash
     git pull
 
-The shared library examples on this course are available as a Juypter Notebook.
 
 More details are available in the README_SECOND file.
 
