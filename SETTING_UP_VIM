@@ -1,4 +1,5 @@
-If you want to use vim to write your code then its best to configure defaults for the editor.  You add these defaults to your '~/.vimrc' file:
+If you want to use vim to write your code then its best to configure defaults for the editor.  
+You add these defaults to your '~/.vimrc' file:
 
 set number
 set shiftwidth=4
