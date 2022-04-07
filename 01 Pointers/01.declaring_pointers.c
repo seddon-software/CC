@@ -10,8 +10,8 @@
  *
  *  It is important that you realize we are creating a variable called px with type int* and not a variable called *px.  The * in the 
  *  declaration says: this variable is a pointer.  Later in the example we use * again.  However this time the * is not used in a
- *  declaration, rather it is just used in code.  This time the * has a different meaning: dereference the pointer (get the data at the 
- *  end of the pointer).  These different meanings of * in different contexts is a constant source of confusion for newbies:
+ *  declaration, rather it is just used in code.  The * has a different meaning depending on context: in code the * means dereference 
+ *  the pointer (get the data at the  end of the pointer).  These different meanings of * is a constant source of confusion for newbies:
  *      * in declaration => I am a pointer
  *      * in code        => dereference the pointer
  *
