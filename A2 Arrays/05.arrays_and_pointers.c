@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 /*
- *  Pointers are often used with arrays.  If we take a pointer an point it at the start of an array, we
- *  can then use it to step through the array.  Fundamental to this is the fact that when you increment a 
- *  pointer by 1 its value changes by the size of the item it points at.  This means the pointer steps to
- *  the next item in the array.
+ *  Pointers are often used with arrays.  If we take a pointer an point it at the start of an array, we can then use it to step through 
+ *  the array.  Fundamental to this is the fact that when you increment a pointer by 1 its value changes by the size of the item it 
+ *  points at.  This means the pointer steps to the next item in the array.
  */
 
 int main(void)

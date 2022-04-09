@@ -1,15 +1,20 @@
 #include <stdio.h>
 
 /*
- *  Arrays are used to store lists.  All items in an array must be of the same type.
+ *  Arrays are used to store lists.  All items in an array must be of the same type.  Create an uninitialized array:
+ *              int myarray[10];
+ * 
+ *  or an initialized array:
+ *              int a[5] = { 100, 200, 300, 400, 500};
  */
 
 int main(void)
 {
+    int myarray[10];                                // uninitialized
     int a[5] = { 100, 200, 300, 400, 500};          // array of 5 ints
     double b[5] = { 1.11, 2.22, 3.33, 4.44, 5.55};  // array of 5 doubles
 
-    // valid indecies range from 0 to 4
+    // valid indeces range from 0 to 4
     printf("a[0] = %i\n", a[0]);        
     printf("a[1] = %i\n", a[1]);        
     printf("a[2] = %i\n", a[2]);        

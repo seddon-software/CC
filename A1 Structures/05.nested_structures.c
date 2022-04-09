@@ -12,7 +12,7 @@
  *  names when initialising:
  *              Rectangle r1 = {.topLeft.x = 0, .topLeft.y = 0, .bottomRight.x = 120, .bottomRight.y = 250};
  * 
- *  or pass all initialisers by position (note the positions of the {}s):
+ *  or pass all initialisers by position (note the nesting of the {}s):
  *              Rectangle r2 = {{0, 0}, {120, 250}};
  */
 
