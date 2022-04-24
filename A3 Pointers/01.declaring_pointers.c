@@ -17,6 +17,12 @@
  *
  *  Finally, note that when you want to print an address, use %p as in:
  *              printf("px = %p\n", px);
+ *
+ *  Memory diagram:
+ *         ┌─────────┐     ┌─────────┐
+ *      px │   &x    │───➤x│   100   │
+ *         └─────────┘     └─────────┘
+ * 
  */
 
 int main(void)

@@ -38,6 +38,7 @@
         "stdbool.h": "c",
         "linklist.h": "c",
         "trees.h": "c",
-        "signal.h": "c"
+        "signal.h": "c",
+        "curses.h": "c"
     }
 }
