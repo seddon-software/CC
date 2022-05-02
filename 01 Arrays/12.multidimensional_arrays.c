@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /*
- *  Multi-dimensional arrays use multiple pairs of [].  Note that you don't need to specify the left most dimension; the compile
+ *  Multi-dimensional arrays use multiple pairs of [].  Note that you don't need to specify the left most dimension; the compiler
  *  can work it out.
  *  
  *  When passing multi-dimensional arrays as parameters you must also pass the dimensions seperately.  However, because the
@@ -9,6 +9,7 @@
  *  dimensional data before the array:
  *              void print_array_of_int(int rows, int cols, int array[rows][cols])
  */
+
 
 void print_array_of_int(int rows, int cols, int array[rows][cols])
 {
