@@ -1,4 +1,3 @@
-
 #ifndef MULTIPLE_INCLUSION_H
 #define MULTIPLE_INCLUSION_H
 

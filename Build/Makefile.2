@@ -1,0 +1,24 @@
+all: main.exe
+
+
+f1.o: f1.c
+	gcc -c -g f1.c
+
+f2.o: f2.c
+	gcc -c -g f2.c
+
+f3.o: f3.c
+	gcc -c -g f3.c
+
+f4.o: f4.c
+	gcc -c -g f4.c
+
+main.o: main.c
+	gcc -c -g main.c
+
+main.exe: f1.o f2.o f3.o f4.o main.o
+	gcc f1.o f2.o f3.o f4.o main.o -o main.exe
+
+clean:
+	rm *.o *.exe
+

@@ -1,3 +1,10 @@
+/*
+        TEXT SEGMENT:   code, constants
+        DATA SEGMENT:   globals
+        STACK:          local variables (managed by the compiler) short lifetimes
+        HEAP:           dynamic variables (managed by you) long lifetimes
+*/
+
 #include <stdio.h>   
 #include <stdlib.h> 
  
@@ -18,3 +25,4 @@ int main(void)
     free(p2);
     free(p3);
 }
+

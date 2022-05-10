@@ -2,7 +2,7 @@
 
 /*
  *  In C, a pointer can point at a single type of variable.  The declaration:
- *          int* px = &x;
+ *              int* px = &x;
  * 
  *  declares px as of type int*, which means a pointer to int.  On the next line we assign px as &x (address of x).  Note that this
  *  can be done in one line as with y: 
@@ -19,8 +19,9 @@
  *              printf("px = %p\n", px);
  *
  *  Memory diagram:
+ *            int*            int
  *         ┌─────────┐     ┌─────────┐
- *      px │   &x    │───➤x│   100   │
+ *      px │   &x    │───➤x│   100   │*px
  *         └─────────┘     └─────────┘
  * 
  */

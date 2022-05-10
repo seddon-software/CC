@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /*
  *  Multi-dimensional arrays use multiple pairs of [].  Note that you don't need to specify the left most dimension; the compiler
  *  can work it out.
@@ -10,6 +8,7 @@
  *              void print_array_of_int(int rows, int cols, int array[rows][cols])
  */
 
+#include <stdio.h>
 
 void print_array_of_int(int rows, int cols, int array[rows][cols])
 {

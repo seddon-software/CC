@@ -45,6 +45,8 @@ int main(void)
     printf("\nincrementing struct Point*\n");
     struct Point c[4] = {{.x = 10, .y = 11}, {.x = 20, .y = 21}, {.x = 30, .y = 31}, {.x = 40, .y = 41}};
     struct Point* pc = &c[0];
+    struct Point p;
+    
     for(int i = 0; i < 7; i++)
     {
         printf("pc = %p, *pc = %i,%i\n", pc, (*pc).x, (*pc).y);

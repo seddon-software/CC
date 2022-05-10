@@ -23,7 +23,7 @@ int main(void)
 {
     int source[4] = {10, 20, 30, 40};
     int target[4];
-
+    
     target[0] = source[0];
     target[1] = source[1];
     target[2] = source[2];

@@ -1,9 +1,9 @@
-# 0 "f1.c"
+# 0 "main.c"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 0 "<command-line>" 2
-# 1 "f1.c"
+# 1 "main.c"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -734,7 +734,7 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 902 "/usr/include/stdio.h" 3 4
 
-# 2 "f1.c" 2
+# 2 "main.c" 2
 
 # 1 "protos.h" 1
 
@@ -743,9 +743,13 @@ void f1();
 void f2();
 void f3();
 void f4();
-# 4 "f1.c" 2
+# 4 "main.c" 2
 
-void f1()
+
+int main()
 {
-    puts("This id f1()");
+    f1();
+    f2();
+    f3();
+    f4();
 }

@@ -94,28 +94,31 @@ void D()
 // 4.3	What do the following code fragments do?
 void aa()
 {
-    // int x = 100;
-    // int* p = &x;
-    // *p = x++;
+    int x = 100;
+    int* p = &x;
+    int temp = x;
+    x++;
+    *p = temp;
 }
 
 void bb()
 {
-    // int x = 100;
-    // int* p = &x;
-    // x = *p++;
+    int x = 100;
+    int* p = &x;
+    x = *p++;
 }
 
 void cc()
 {
-    // int x = 100;
-    // int* p = &x;
-    // *p++;
+    int x = 100;
+    int* p = &x;
+    *(p++);
 }
 
 
 int main()
 {
+    /*
     a();
     b();
     c();
@@ -128,6 +131,7 @@ int main()
     B();
     C();
     D();
+    */
     aa();
     bb();
     cc();

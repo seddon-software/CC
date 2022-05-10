@@ -39,6 +39,8 @@
         "linklist.h": "c",
         "trees.h": "c",
         "signal.h": "c",
-        "curses.h": "c"
+        "curses.h": "c",
+        "stdio.h": "c",
+        "string.h": "c"
     }
 }

@@ -6,7 +6,7 @@ WARNINGS := -Wall
 CFLAGS := -g -O0 $(WARNINGS) -std=c11 
 SOURCES := $(wildcard *.c)
 OBJECTS := $(SOURCES:.c=.o)
-FLAGS := -save-temps	# save intermediate file
+#FLAGS := -save-temps	# save intermediate file
 #FLAGS := -E				# preprocessor only
 
 all: all.exe
@@ -15,7 +15,7 @@ all: all.exe
 	$(CC) -c $(FLAGS) $<
 
 all.exe: $(OBJECTS)
-	@echo $(F_SOURCES)
+	@echo $(SOURCES)
 	@echo $($<)
 	@echo $($?)
 	$(CC) $(FLAGS) $(CFLAGS) $? -o $@

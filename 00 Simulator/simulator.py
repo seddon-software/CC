@@ -43,9 +43,13 @@ def output(row, col, text, color=None):
         stdscr.addstr(row, col, text, color)
         row += 1
     except Exception as e:
-        if not os.environ.get('TERM_PROGRAM') == "xvscode": 
-            print(e)
+        if not os.environ.get('TERM_PROGRAM') == "vscode": 
+            # print(e)
+            pass
     return row
+
+def label(row, col, text):
+    stdscr.addstr(row, col, text, curses.color_pair(1))
 
 class Code:
     '''

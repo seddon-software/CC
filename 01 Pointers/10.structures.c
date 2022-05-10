@@ -35,7 +35,7 @@ void print(struct Point p)
 
 int main(void)
 {
-    struct Point p = {.x = 1, .y = 2};
+    struct Point p = {1, 2};
     struct Point q = {.x = 3, .y = 4};
     struct Point* ptr;
 

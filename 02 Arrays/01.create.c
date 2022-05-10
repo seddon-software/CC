@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+int z[3];
 /*
  *  Arrays are used to store lists.  All items in an array must be of the same type.  Create an uninitialized array:
  *              int myarray[10];
@@ -24,7 +25,7 @@ int main(void)
     printf("sizeof a = %li\n", sizeof(a)/sizeof(int));
 
     // and for array of doubles 
-    printf("b[0] = %lf\n", b[0]);        
+    printf("b[0] = %6.2lf\n", b[0]);        
     printf("b[1] = %lf\n", b[1]);        
     printf("b[2] = %lf\n", b[2]);        
     printf("b[3] = %lf\n", b[3]);        
