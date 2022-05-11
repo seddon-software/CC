@@ -6,6 +6,7 @@
 
 
 #include <stdio.h>
+#include <stddef.h>
 
 #pragma pack(16)
 
@@ -40,4 +41,8 @@ int main(void)
     f.day    = 20;        /*  3       */
     f.month  = 107;       /*  4       */
     f.year   = -55;       /*  5       */
+
+    printf("day offset = %lu bytes\n", offsetof(struct Flags, day));
+    printf("month offset = %lu bytes\n", offsetof(struct Flags, month));
+    printf("year offset = %lu bytes\n", offsetof(struct Flags, year));
 }

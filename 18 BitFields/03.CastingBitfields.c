@@ -40,7 +40,7 @@ int main(void)
     allOnes.type = 1;
     allOnes.owner = 1;
     allOnes.index = 1;
-    printf("%04x %i\n", allOnes, allOnes);
+    printf("%04x %u\n", allOnes, allOnes);
 
     // casting with void*
     void* v = &allOnes;
