@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-#pragma pack(16)
+#pragma pack(16)        // align on 16 bit boundary (gcc)
 
 struct Flags
 {
@@ -24,17 +24,26 @@ struct Flags
 
 int main(void)
 {
-    struct Flags allOnes;
-    struct Flags theFlags;
-    int   flag;
-    void* v = &allOnes;
+    struct Flags flags;
 
+    
+    flags.owner = 33;
+    flags.index = 17;
+    printf("flags.owner = %04x %u\n", flags.owner, flags.owner);
+    printf("flags.index = %04x %u\n", flags.index, flags.index);
+    flags.index = 65;       // not enough bits for this (overflow)
+    printf("flags.index = %04x %u\n", flags.index, flags.index);
+    
+    struct Flags allOnes;
     allOnes.flag_1 = 1;
     allOnes.flag_2 = 1;
     allOnes.type = 1;
     allOnes.owner = 1;
     allOnes.index = 1;
-    
-    flag     = *(int*) v;
-    theFlags = *(struct Flags*) v;
+    printf("%04x %i\n", allOnes, allOnes);
+
+    // casting with void*
+    void* v = &allOnes;
+    int   flag = *(int*)v;  // cast back to int
+    printf("%04x %i\n", flag, flag);
 }

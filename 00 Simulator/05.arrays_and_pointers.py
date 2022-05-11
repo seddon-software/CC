@@ -5,7 +5,7 @@ void double_array(int* myArray)
 {
     for(int i = 0; i < SIZE; i++)
     {
-        myArray[i] *= 2;
+        *myArray *= 2;
         myArray++;
     }
 }

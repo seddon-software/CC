@@ -4,6 +4,6 @@ int main(void)
 {
     int result, n = 3;
 
-    result = CUBE(n);
+    result = CUBE(n++);
     printf("%i %i \n", result, n);
 }

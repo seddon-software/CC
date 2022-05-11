@@ -4,8 +4,9 @@
 
 ************************************************************************/
 
+double multiply(double, double);
 
-int main (void)
+int main(void)
 {
     double result;
     int result2;

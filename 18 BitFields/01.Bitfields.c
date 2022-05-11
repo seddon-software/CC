@@ -30,21 +30,26 @@ int main(void)
 
     flag  = BIT0 | BIT4 | BIT8 | BIT12;
     printf("%04x\n", flag);
-    flag |= BIT1 | BIT2 | BIT3;
+    flag |= BIT1 | BIT2 | BIT3;         // |= ors bits
     printf("%04x\n", flag);
-    flag ^= BIT4 | BIT8 | BIT12;
+    flag ^= BIT4 | BIT8 | BIT12;        // ^= inverts bits
     printf("%04x\n", flag);
 
     flag  = BIT0 | BIT4 | BIT8 | BIT12;
-    flag &= 0x00ff;
+    flag &= 0x00ff;                     // &= ands bits (mask)
     printf("%04x\n", flag);
 
+    printf("%04x %i\n", flag, flag);
+    flag  = flag << 1;                  // << shift left multiplies by 2
+    printf("%04x %i\n", flag, flag);
     flag  = flag << 1;
+    printf("%04x %i\n", flag, flag);
     flag  = flag << 1;
+    printf("%04x %i\n", flag, flag);
     flag  = flag << 1;
-    flag  = flag << 1;
+    printf("%04x %i\n", flag, flag);
     flag  = flag >> 1;
-    printf("%04x\n", flag);
+    printf("%04x %i\n", flag, flag);
 }
 
 

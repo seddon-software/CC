@@ -3,12 +3,10 @@
 #define USD 1
 #define UK  2
 #define DM  3
-
 // command line:
 //      gcc -E -DCURRENCY=USD 02.ConditionalCompilation.c
 int main (void)
 {
-
     #if CURRENCY == USD
     printf("Currency is USD\n");
     printf("Currency is USD\n");

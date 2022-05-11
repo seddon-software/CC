@@ -10,6 +10,7 @@ all: Main.exe
 
 Main.exe: $(OBJECTS)
 	$(CC) $(OBJECTS) -o $@
+	mv Main.exe all.exe
 	
 $(OBJECTS): %.o: %.c
 	$(CC) -c $(CFLAGS) $<
