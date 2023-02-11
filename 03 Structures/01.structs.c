@@ -19,7 +19,7 @@ struct Point
     double x;
     int y;
 };
-
+ 
 int main()
 {
     // declare structs and initialise
@@ -29,10 +29,10 @@ int main()
     struct Point p4 = {.x = 33.33, .y = 44};
 
     // print components
-    printf("p1 = %lf, %i\n", p1.x, p1.y);
-    printf("p2 = %lf, %i\n", p2.x, p2.y);
-    printf("p3 = %lf, %i\n", p3.x, p3.y);
-    printf("p4 = %lf, %i\n", p4.x, p4.y);
+    printf("p1 = %6.3lf, %05i\n", p1.x, p1.y);
+    printf("p2 = %06.3lf, %05i\n", p2.x, p2.y);
+    printf("p3 = %6.3lf, %5i\n", p3.x, p3.y);
+    printf("p4 = %6.3lf, %5i\n", p4.x, p4.y);
 
     // set components
     p1.x = 55.55;

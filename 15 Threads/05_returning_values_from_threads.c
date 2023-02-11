@@ -19,13 +19,9 @@ typedef struct {
 
 int sum_of_squares(void* v) {
     RANGE* range = (RANGE*) v;
-    // long* pSum = (long*) malloc(sizeof(long));
-    // *pSum = 0;
     for(long i = range->low; i <= range->high; i++) {
         *range->pResult += i*i;
     }
-//    int result = *pSum;
-//    free(pSum);
     return 0;
 }
 

@@ -41,6 +41,7 @@
         "signal.h": "c",
         "curses.h": "c",
         "stdio.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "stddef.h": "c"
     }
 }

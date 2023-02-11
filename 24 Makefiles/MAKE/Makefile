@@ -12,6 +12,8 @@ G_OBJECTS := $(G_SOURCES:.c=.o)
 all: f.exe g.exe
 	
 f.exe: $(F_OBJECTS)
+	$(info $$? is [${?}])
+	$(info $$@ is [${@}])
 	$(CC) $(CFLAGS) $? -o $@
 
 g.exe: $(G_OBJECTS)
@@ -31,10 +33,9 @@ clean:
 	-rm -f *.o
 	-rm -f *.exe
 	
-	
 print:
-	@echo $(F_SOURCES)
-	@echo $(G_SOURCES)
-	@echo $(F_OBJECTS)
-	@echo $(G_OBJECTS)
+	@echo F_SOURCES = $(F_SOURCES)
+	@echo G_SOURCES = $(G_SOURCES)
+	@echo F_OBJECTS = $(F_OBJECTS)
+	@echo G_OBJECTS = $(G_OBJECTS)
 	

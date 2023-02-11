@@ -36,7 +36,7 @@ int main(void)
     printf("%04x\n", flag);
 
     flag  = BIT0 | BIT4 | BIT8 | BIT12;
-    flag &= 0x00ff;                     // &= ands bits (mask)
+    flag &= 0x00FF;                     // &= ands bits (mask)
     printf("%04x\n", flag);
 
     printf("%04x %i\n", flag, flag);

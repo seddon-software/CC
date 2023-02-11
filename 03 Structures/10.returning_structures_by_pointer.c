@@ -23,7 +23,9 @@ Point* reflect_point_in_xaxis(Point copy)  // pass by copy and return by pointer
 {
     // reflect point (inverts x component)
     copy.x = -copy.x;
-    return &copy;       // this will generate a segmentation fault
+    Point* ptr = malloc(sizeof(Point));
+    *ptr = copy;
+    return ptr;       // this will generate a segmentation fault
 }
 
 int main()
@@ -34,5 +36,6 @@ int main()
     Point* ptr = reflect_point_in_xaxis(p);
     printf("Point p = {%i,%i}\n", p.x, p.y);    
     printf("Reflected Point = {%i,%i}\n", ptr->x, ptr->y);
+    free(ptr);
 }
 

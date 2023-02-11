@@ -28,6 +28,7 @@
 
 int main(void)
 {
+    // use magnus to show tooltips
     int x = 100;
     int* px;
     px = &x;
