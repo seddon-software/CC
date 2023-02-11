@@ -1,9 +1,25 @@
 /*
-        TEXT SEGMENT:   code, constants
-        DATA SEGMENT:   globals
-        STACK:          local variables (managed by the compiler) short lifetimes
-        HEAP:           dynamic variables (managed by you) long lifetimes
-*/
+ *      VIRTUAL MEMORY MAP
+ *      ==================
+ * 
+ *      0    ┌─────────┐
+ *           │  KERNEL │
+ *           │  KERNEL │ PROTECTED REGION
+ *           │  KERNEL │
+ *      2^63 ├─────────┤
+ *           │  text   │ code, constants
+ *           ├─────────┤
+ *           │  data   │ globals
+ *           ├─────────┤
+ *           │  heap   │ dynamic variables (managed by you: malloc etc) long lifetimes
+ *           ├─────────┤
+ *           │         │
+ *           │         │ HOLE: shared memory (see Linux API)
+ *           │         │
+ *           ├─────────┤
+ *           │  stack  │ local variables (managed by the compiler) short lifetimes
+ *      2^64 └─────────┘
+ */
 
 #include <stdio.h>   
 #include <stdlib.h> 
