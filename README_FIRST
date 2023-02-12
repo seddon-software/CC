@@ -11,11 +11,21 @@ If you are on a Diamond machine, setup vscode with:
 You also need to setup your C/C++ compiler:
     module load gcc/9.2.0
 
+If you want a more up to date version of vscode, note that some Diamond machines only work with vscode if you use the no-sandbox option
+(but don't try this with vscode/1.42.1):
+    code --no-sandbox .
+
+Note: if you dial in with NoMachine I've found I can't get versions after 1.42.1 to work, even with the no-sandbox option.
+
 To clone this repository:
     cd 
     git clone https://github.com/seddon-software/CC.git
     cd CC
     code .
+
+You may need to install the Python and C/C++ extensions:
+    code --install-extension ms-python.python
+    code --install-extension ms-vscode.cpptools
 
 If you've downloaded the examples already and you want to get updates:
     git pull
