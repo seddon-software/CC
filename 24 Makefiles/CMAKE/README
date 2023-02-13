@@ -1,0 +1,36 @@
+Overview
+========
+This is an example of CMake; the source files to be built are stored in the src directory.
+To see the source files, type:
+    tree src
+
+To run CMake use the script:
+    build_and_run
+
+This will invoke CMake to create executables and then run these executables.
+
+Details
+=======
+Build files are usually generated in a seperate folder that can be easily removed.  If you inspect the build_and_run script you will see the line:
+    cmake -S src -B build
+
+This defines the source and build directories; the command creates all the necessary build files in the build directory.  By default
+these files are based on the make utility.  To remove the build files:
+    rm -rf build
+
+The actual build is performed by the command:
+    cmake --build build
+
+The executable files will be placed in the src tree.  To remove them type:
+    cmake --build build --target clean
+
+Alternatively, run:
+    cmake --build build --clean-first
+
+This will clean before building.
+
+The build_and_run script performs the above and additionally invokes the executable files in the src tree.
+
+
+
+

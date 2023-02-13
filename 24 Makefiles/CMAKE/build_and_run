@@ -1,6 +1,6 @@
 rm src/f src/g
 rm -r build
-cmake -v -S src -B build
+cmake -S src -B build
 cmake --build build
 
 # execute the files we've just built

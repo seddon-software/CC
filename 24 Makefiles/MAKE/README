@@ -1,0 +1,10 @@
+To run make just type:
+    make clean
+    make
+
+This will create executables and then to run these executables type:
+    f.exe
+    g.exe
+
+
+
