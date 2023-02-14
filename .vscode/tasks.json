@@ -52,7 +52,7 @@
                 "cwd": "${fileDirname}"
             },
             "command": "make",
-            "args": ["-i"],
+            "args": ["-i", "-B"],
             "problemMatcher": [],
             "group": {
                 "kind": "build",
