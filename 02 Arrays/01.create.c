@@ -31,5 +31,5 @@ int main(void)
     printf("b[3] = %lf\n", b[3]);        
     printf("b[4] = %lf\n", b[4]);
     printf("sizeof b in bytes = %li\n", sizeof(b));
-    printf("sizeof a = %li\n", sizeof(b)/sizeof(double));
+    printf("sizeof b = %li\n", sizeof(b)/sizeof(double));
 }
