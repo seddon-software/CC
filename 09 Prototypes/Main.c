@@ -6,7 +6,9 @@
 
 double multiply(double, double);
 
-int main(void)
+
+// int main(int argc, char* argv[], chr** env)
+int main()
 {
     double result;
     int result2;

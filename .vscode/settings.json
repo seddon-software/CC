@@ -42,6 +42,7 @@
         "curses.h": "c",
         "stdio.h": "c",
         "string.h": "c",
-        "stddef.h": "c"
+        "stddef.h": "c",
+        "assert.h": "c"
     }
 }

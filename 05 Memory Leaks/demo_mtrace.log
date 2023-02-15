@@ -1,5 +1,0 @@
-= Start
-@ /lib/x86_64-linux-gnu/libc.so.6:(_IO_file_doallocate+0x94)[0x7f8ad3577e84] + 0x556dd5c04410 0x400
-@ demo_mtrace.exe:[0x556dd4ab21ff] + 0x556dd5c04820 0x78
-@ demo_mtrace.exe:[0x556dd4ab22d4] + 0x556dd5c048b0 0x50
-@ /lib/x86_64-linux-gnu/libc.so.6:[0x7f8ad368e96c] - 0x556dd5c04410

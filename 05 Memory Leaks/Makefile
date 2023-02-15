@@ -17,5 +17,8 @@ $(EXECUTABLES): %.exe: %.c
 
 clean::
 	- rm -f *.exe
+	- rm -f *.out.*
+	- rm -f *.log
+
 	
 	

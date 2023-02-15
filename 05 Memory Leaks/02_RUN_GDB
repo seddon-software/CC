@@ -1,5 +1,5 @@
 echo "we are going to run gdb with the following command:"
-echo 'gdb -q -n -ex "b main" -ex "bt" -tui -se=myfile.exe -c core'
+echo 'gdb -q -n -ex "b main" -ex "bt" -tui -se=demo_corefile.exe -c core'
 echo 'this will run the backtrace command (bt) after gdb starts'
 read -p "hit return to proceed"
 

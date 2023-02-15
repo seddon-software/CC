@@ -1,4 +1,4 @@
-echo "we are going to run myfile.exe"
+echo "we are going to run demo_malloc_check.exe"
 echo "    it will create memory leaks" 
 echo "    valgrind will report on these leaks"
 read -p "hit a key to proceed"
