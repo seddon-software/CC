@@ -7,18 +7,17 @@ main(int argc, char *argv[])
 {
     char *p;
 
-   if (mcheck(NULL) != 0) {
+    if (mcheck(NULL) != 0) {
         fprintf(stderr, "mcheck() failed\n");
-
-       exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE);
     }
 
-   p = malloc(1000);
+    p = malloc(1000);
 
-   fprintf(stderr, "About to free\n");
+    fprintf(stderr, "About to free\n");
     free(p);
     fprintf(stderr, "\nAbout to free a second time\n");
     free(p);
 
-   exit(EXIT_SUCCESS);
+    exit(EXIT_SUCCESS);
 }

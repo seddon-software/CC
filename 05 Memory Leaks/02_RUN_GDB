@@ -1,7 +1,7 @@
 echo "we are going to run gdb with the following command:"
 echo 'gdb -q -n -ex "b main" -ex "bt" -tui -se=myfile.exe -c core'
 echo 'this will run the backtrace command (bt) after gdb starts'
-read -p "hit a key to proceed"
+read -p "hit return to proceed"
 
 # remove local core file
 rm -rf core
@@ -24,3 +24,4 @@ fi
 
 # run gdb and use the 'bt' command to get a backtrace
 gdb -q -n -ex "b main" -ex "bt" -tui -se=demo_corefile.exe -c "$CORE_FILE"
+
