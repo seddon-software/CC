@@ -12,8 +12,18 @@ ar -t libf.a
 #   the name of the library: -lf
 # note all library names are of the form libxxx.a, but you only specify the xxx part
 cd ../src
-gcc -static f_main.c -L ../mylib -l f -o f.exe
-f.exe
+
+Ubuntu=$(uname -a | sed 's/.*Ubuntu.*/Ubuntu/')
+if [ ${Ubuntu}x = Ubuntux ]
+then
+    # on Ubuntu you need pick up latest core file
+    STATIC="-static"
+else    
+    STATIC=""     # Diamond
+fi
+
+gcc $STATIC f_main.c -L ../mylib -l f -o f.exe
+./f.exe
 
 
 

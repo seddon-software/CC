@@ -24,6 +24,7 @@ void reversePrint (char *name)
 /* ----- BEFORE RECURSION ----- */
 
     ch = name[0];
+    putchar (ch);
 
     if (strlen(name) != 1)
     {
@@ -32,7 +33,6 @@ void reversePrint (char *name)
     }
 
 /* ----- AFTER RECURSION ----- */
-    putchar (ch);
 
 }
 
