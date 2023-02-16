@@ -1,6 +1,4 @@
 set -v
-set -x
-
 # create a static library called 'libf.a'
 # by first compiling several C files using the -c option of gcc
 # and then using 'ar' to make a library archive
@@ -18,11 +16,13 @@ cd ../src
 ubuntu=$(gcc --version | grep Ubuntu)
 centos=$(gcc --version | grep 'Red Hat')
 
+# now build the static library
 if [ ! -z "$ubuntu" ]
 then
-    STATIC=-static
+    gcc -static f_main.c -L../mylib -lf -o f.exe
 fi
 
+# on diamond machines (centos) you omit the static option
 if [ ! -z "$centos" ]
 then
     gcc f_main.c -L../mylib -lf -o f.exe
