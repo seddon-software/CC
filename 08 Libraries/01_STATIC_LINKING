@@ -15,13 +15,17 @@ ar -t libf.a
 # note all library names are of the form libxxx.a, but you only specify the xxx part
 cd ../src
 
-Ubuntu=$(uname -a | sed 's/.*Ubuntu.*/Ubuntu/')
-if [ ${Ubuntu}x = Ubuntux ]
+ubuntu=$(gcc --version | grep Ubuntu)
+centos=$(gcc --version | grep 'Red Hat')
+
+if [ ! -z "$ubuntu" ]
 then
-    # on Ubuntu you need pick up latest core file
-    STATIC="-static"
-else    
-    STATIC=""     # Diamond
+    STATIC=-static
+fi
+
+if [ ! -z "$centos" ]
+then
+    STATIC=
 fi
 
 gcc $STATIC f_main.c -L ../mylib -l f -o f.exe
