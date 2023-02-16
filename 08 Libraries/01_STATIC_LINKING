@@ -6,7 +6,7 @@ set -x
 # and then using 'ar' to make a library archive
 cd mylib
 gcc -c f1.c f2.c f3.c
-ar -cr libf.a f1.o f2.o f3.o
+ar -crs libf.a f1.o f2.o f3.o
 ar -t libf.a
 
 # complete the static linking by specifying:
