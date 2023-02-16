@@ -25,7 +25,7 @@ fi
 
 if [ ! -z "$centos" ]
 then
-    gcc f_main.c -L ../mylib -l f -o f.exe
+    gcc f_main.c -L../mylib -lf -o f.exe
 fi
 
 ./f.exe
