@@ -7,6 +7,6 @@ gcc -shared -fPIC -o libf.so f1.c f2.c f3.c
 #
 # *** However, the linker fails to locate shared library
 cd ../src
-gcc f_main.c -o f.exe
+gcc f_main.c -o f_shared.exe
 
 

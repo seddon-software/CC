@@ -19,16 +19,16 @@ centos=$(gcc --version | grep 'Red Hat')
 # now build the static library
 if [ ! -z "$ubuntu" ]
 then
-    gcc -static f_main.c -L../mylib -lf -o f.exe
+    gcc -static f_main.c -L../mylib -lf -o f_static.exe
 fi
 
 # on diamond machines (centos) you omit the static option
 if [ ! -z "$centos" ]
 then
-    gcc f_main.c -L../mylib -lf -o f.exe
+    gcc f_main.c -L../mylib -lf -o f_static.exe
 fi
 
-./f.exe
+./f_static.exe
 
 
 

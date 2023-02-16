@@ -5,6 +5,6 @@ ls -l
 
 
 # inspect shared (dynamically) linked library:
-file libf1.so
-nm libf1.so
+file libf.so
+nm libf.so
 

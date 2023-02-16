@@ -1,7 +1,0 @@
-set -v
-cd src
-ldd f.exe
-
-
-
-

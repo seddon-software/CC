@@ -10,11 +10,11 @@ gcc -shared -fPIC -o libf.so f1.c f2.c f3.c
 # set up LD_LIBRARY_PATH incorrectly (linking works, but ...)
 cd ../src
 export LD_LIBRARY_PATH=../mylib-
-gcc f_main.c -L../mylib -lf -o f.exe
+gcc f_main.c -L../mylib -lf -o f_shared.exe
 
 
 # try to run the program (shared library can't be found)
-f.exe
+f_shared.exe
 
 
 

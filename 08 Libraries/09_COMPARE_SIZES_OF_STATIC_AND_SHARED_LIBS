@@ -1,0 +1,4 @@
+# Compare sizes of static and shared libraries
+cd src
+ls -l f_static.exe f_shared.exe
+

@@ -1,0 +1,8 @@
+set -v
+cd src
+ldd f_static.exe
+ldd f_shared.exe
+
+
+
+

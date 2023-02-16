@@ -7,8 +7,8 @@ gcc -shared -o libf.so f1.c f2.c f3.c
 
 # use -Wl to pass information directly to the linker (ld)
 cd ../src
-gcc f_main.c -Wl,-rpath=../mylib -L../mylib -lf -o f.exe
-f.exe
+gcc f_main.c -Wl,-rpath=../mylib -L../mylib -lf -o f_shared.exe
+f_shared.exe
 
 
 

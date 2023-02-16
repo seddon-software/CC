@@ -15,8 +15,8 @@ sudo ldconfig -p | grep libf.so
 #
 # now link with libf.so
 cd ../src
-gcc f_main.c -lf -o f.exe
-f.exe
+gcc f_main.c -lf -o f_shared.exe
+f_shared.exe
 
 #
 # clean up
