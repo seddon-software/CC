@@ -25,10 +25,9 @@ fi
 
 if [ ! -z "$centos" ]
 then
-    STATIC=
+    gcc f_main.c -L ../mylib -l f -o f.exe
 fi
 
-gcc $STATIC f_main.c -L ../mylib -l f -o f.exe
 ./f.exe
 
 
