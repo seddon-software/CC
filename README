@@ -47,7 +47,6 @@ Note that each time you debug a C file I run the make task:
     make -i -B
 This ensures make continues after errors and rebuilds each executable unconditionally, just in case the executable was built on another machine.
 
-More details are available in the README_SECOND file.
 
 vscode key bindings
 ===================

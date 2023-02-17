@@ -56,8 +56,8 @@
               "ignoreFailures": false
           }
       ],
-      "preLaunchTask": "make",
-      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "unconditional_make",
+      "miDebuggerPath": "/usr/bin/gdb"
   },
   {
     "name": "Python",

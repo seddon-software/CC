@@ -1,4 +1,0 @@
-CONFIG_DIR=$(jupyter --config-dir)
-mkdir -p $CONFIG_DIR
-cp custom.css $CONFIG_DIR
-ls $CONFIG_DIR

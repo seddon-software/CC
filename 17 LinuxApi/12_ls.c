@@ -112,7 +112,6 @@ void showfile(const char *filename) {
         // file size
         int length = statBuffer.st_size;
         printf("%10i", length);
-
     }
     printf("  %-20s\n", filename);
 }

@@ -26,6 +26,7 @@
     "editor.minimap.enabled": false,
     "editor.fontSize": 12,
     "files.exclude": {
+        ".gitignore": true,
         "**/*.o": true,
         "**/*.exe": true
     },
@@ -43,6 +44,7 @@
         "stdio.h": "c",
         "string.h": "c",
         "stddef.h": "c",
-        "assert.h": "c"
+        "assert.h": "c",
+        "headers.h": "c"
     }
 }
