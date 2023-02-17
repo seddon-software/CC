@@ -20,6 +20,7 @@ int main() {
     pid_t pid;
 
     pid = fork();
+    printf("pid = %i\n");
 
     switch (pid) {
         case -1:
@@ -29,7 +30,7 @@ int main() {
             printf("We are now in the child\n");
             printf("The child receives a return code of %d\n", pid);
             printf("Child process pid = %d\n", getpid());
-            exit(0);
+            break;
         default:
             printf("We are now in the parent\n");
             printf("The parent receives a return code of %d\n", pid);

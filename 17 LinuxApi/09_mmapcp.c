@@ -1,25 +1,32 @@
+/*
+    MAP_SHARED
+
+    Share this mapping. Updates to the mapping are visible to other processes that map this file, and are 
+    carried through to the underlying file. The file may not actually be updated until msync(2) or munmap() 
+    is called.
+
+    MAP_PRIVATE
+
+    Create a private copy-on-write mapping. Updates to the mapping are not visible to other processes 
+    mapping the same file, and are not carried through to the underlying file.
+*/
+
 #include "headers.h"
 
 #define NOMAP ((void*) -1)
 #define PERMS (S_IRWXU|S_IRWXG|S_IRWXO)
 
+#define SOURCE_FILE "resources/gcc.txt"
+#define TARGET_FILE "resources/gcc_copy.txt"
 
-int main(int argc, char *argv[]) {
+int main() {
     int target, source, len;
     char *src, *dest;
     struct stat statbuf;
 
-    /*
-     * Usage check - allow just one file at a time
-     */
-    if (argc != 3) {
-        fprintf(stderr, "Usage: %s src dest\n", argv[0]);
-        exit(1);
-    }
-
-    source = open(argv[1], O_RDONLY);
+    source = open(SOURCE_FILE, O_RDONLY);
     if (source < 0) {
-        perror(argv[1]);
+        perror(SOURCE_FILE);
         exit(1);
     }
 
@@ -30,15 +37,15 @@ int main(int argc, char *argv[]) {
 
     len = statbuf.st_size;
 
-    target = open(argv[2], O_RDWR | O_CREAT, statbuf.st_mode & PERMS);
+    target = open(TARGET_FILE, O_RDWR | O_CREAT, statbuf.st_mode & PERMS);
     if (target < 0) {
-        perror(argv[2]);
+        perror(TARGET_FILE);
         exit(1);
     }
 
     // clear all data from desination file
     if (ftruncate(target, len) < 0) {
-        perror("failed to truncate file");
+        perror("failed to truncate" TARGET_FILE);
         exit(1);
     }
 

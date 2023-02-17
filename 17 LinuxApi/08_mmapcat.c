@@ -4,59 +4,51 @@
  * A version of the "cat" program that uses mmap
  * to gain access to the file being listed.
  */
+
+#define SOURCE_FILE "resources/gcc.txt"
+
 int main(int argc, char *argv[]) {
     int fd, length;
     struct stat sbuf;
     char *data;
 
     /*
-     * Usage check - allow just one file at a time
-     */
-    if (argc != 2) {
-        fprintf(stderr, "Usage: %s file\n", argv[0]);
-        exit(1);
-    }
-
-    /*
-     * The file needs to be opened, then we need its size.
+     * The file needs to be opened and we need its size.
      * Should also check that it's a regular file - mmap won't
      * work on other stuff...
      */
-    if ((fd = open(argv[1], O_RDONLY)) < 0) {
-        perror(argv[1]);
+    if ((fd = open(SOURCE_FILE, O_RDONLY)) < 0) {
+        perror(SOURCE_FILE);
         exit(1);
     }
+
+    // read the inode information and obtain file size
+    // note: fstat() uses fds; stat() uses filenames
     if (fstat(fd, &sbuf) < 0) {
         perror("stat");
         exit(1);
     }
+    length = sbuf.st_size;
+
+    // use macro to check if regular file
     if (!S_ISREG(sbuf.st_mode)) {
         fprintf(stderr, "%s: not a regular file\n", argv[1]);
         exit(1);
     }
-    length = sbuf.st_size;
 
-    /*
-     * Map the file into our address space, we should get a pointer to
-     * the start of the file data.
-     */
+    // Map the file into our address space
+    //   and return a pointer to the start of the file's data
     data = mmap(0, length, PROT_READ, MAP_PRIVATE, fd, 0);
     if (data == (char *) -1) {
         perror("mmap");
         exit(1);
     }
 
-    /*
-     * Don't need the file open any more
-     */
+    // we don't need the file open any more
     close(fd);
 
-    /*
-     * Now we simply copy the contents of the file to stdout. It appears
-     * like an area of our address space, so one call to write() does the
-     * job for us...
-     */
-    write(fileno(stdout), data, length);
+    // Now simply copy the contents of the file to stdout
+    write(1, data, length);
 
     exit(0);
 }
