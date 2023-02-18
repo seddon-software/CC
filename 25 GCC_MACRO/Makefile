@@ -1,23 +1,17 @@
 # Important gcc flags are discussed at:
 #		https://www.linuxfordevices.com/tutorials/linux/important-gcc-flags
 
+.SILENT:
+
 CC := gcc
 WARNINGS := -Wall
 CFLAGS := -g -O0 $(WARNINGS) -std=c11 
 SOURCES := $(wildcard *.c)
 OBJECTS := $(SOURCES:.c=.o)
-#FLAGS := -save-temps	# save intermediate file
-#FLAGS := -E				# preprocessor only
 
 all: all.exe
 
-%.o: %.c
-	$(CC) -c $(FLAGS) $<
-
 all.exe: $(OBJECTS)
-	@echo $(SOURCES)
-	@echo $($<)
-	@echo $($?)
 	$(CC) $(FLAGS) $(CFLAGS) $? -o $@
 
 clean:

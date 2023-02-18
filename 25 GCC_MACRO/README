@@ -1,0 +1,6 @@
+Standard Compilation Options
+============================
+
+-c  Compile or assemble the source files, but do not link.
+-S  Stop after the stage of compilation proper; do not assemble.
+-E  Stop after the preprocessing stage.
