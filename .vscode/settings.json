@@ -45,6 +45,8 @@
         "string.h": "c",
         "stddef.h": "c",
         "assert.h": "c",
-        "headers.h": "c"
+        "headers.h": "c",
+        "unistd.h": "c",
+        "threads.h": "c"
     }
 }
