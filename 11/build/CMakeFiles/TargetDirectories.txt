@@ -1,0 +1,12 @@
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/01_character_types.exe.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/02_wide_characters.exe.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/03_multibyte_characters.exe.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/04_wide_to_multibyte.exe.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/05_multibyte_to_wide.exe.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/06_wide_and_narrow_streams.exe.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/07_unicode_identifiers.exe.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/08_code_points.exe.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/09.print_char32_t.exe.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/10.convert_to_utf8.exe.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/edit_cache.dir
+/home/chris/home/workspace/cpp/A28_Unicode/build/CMakeFiles/rebuild_cache.dir

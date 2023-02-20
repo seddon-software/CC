@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Wall CMakeFiles/10.convert_to_utf8.exe.dir/10.convert_to_utf8.cpp.o -o 10.convert_to_utf8.exe 

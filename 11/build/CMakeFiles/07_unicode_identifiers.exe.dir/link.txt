@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Wall CMakeFiles/07_unicode_identifiers.exe.dir/07_unicode_identifiers.cpp.o -o 07_unicode_identifiers.exe 

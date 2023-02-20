@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Wall CMakeFiles/04_wide_to_multibyte.exe.dir/04_wide_to_multibyte.cpp.o -o 04_wide_to_multibyte.exe 

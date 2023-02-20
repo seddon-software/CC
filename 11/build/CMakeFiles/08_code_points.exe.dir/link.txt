@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Wall CMakeFiles/08_code_points.exe.dir/08_code_points.cpp.o -o 08_code_points.exe 

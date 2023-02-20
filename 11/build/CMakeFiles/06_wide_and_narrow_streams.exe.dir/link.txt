@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Wall CMakeFiles/06_wide_and_narrow_streams.exe.dir/06_wide_and_narrow_streams.cpp.o -o 06_wide_and_narrow_streams.exe 
