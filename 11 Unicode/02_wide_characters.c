@@ -1,45 +1,50 @@
 /*
-UTF-8
-    Pro: compatible with all existing strings and most existing code
-    Pro: takes less space
-    Pro: widely used as an interchange format (e.g. in XML)
-    Con: more complex processing, O(n) string indexing
+There are 2 types of string representation: multibyte (8-bit bytes) or wide character (size depends 
+on platform).
 
-Wide characters
-    Pro: easy to process
-    Con: wastes space
-    Pro: Simple syntax, L"Hello, world."
+To use the multibyte representation you declare characters with char.
+To use multibyte strings use "...."
 
-    Con: the size of wide characters is not consistent across platforms (should be 4 bytes, some incorrectly use 2-byte wide characters)
-    Con: should not be used for output, since spurious zero bytes and other low-ASCII characters with common meanings (such as '/' 
-         and '\n') will likely be sprinkled throughout the data.
-
-Multibyte
-    Pro: no conversions ever needed on input and output
-    Pro: built-in C library support
-    Pro: provides the widest possible internationalization, since in rare cases conversion between local encodings and Unicode does 
-         not work well
-    Con: strings are opaque
-    Con: perpetuates incompatibilities. For example, there are three major encodings for Russian. If one Russian sends data to another 
-         through your program, the recipient will not be able to read the message if his or her computer is configured for a different 
-         Russian encoding. But if your program always converts to UTF-8, the text is effectively normalized so that it will be widely 
-         legible (especially in the future) no matter what encoding it started in.
+To use the wide character representation you declare characters with wchar_t.
+To use wide character strings use L"...."
 */
 
 #include <stdio.h>
 #include <wchar.h>
 #include <locale.h>
 
-int main() {
-    setlocale(LC_ALL, "");
 
-    // define characters from Unicode Code Points
+void usingCodePoints()
+{
     wchar_t star = 0x2605;
     wchar_t pi = 0x03C0;
     wchar_t hebrew_alef = 0x05D0;
+    wchar_t pài = 0x200A2;
 
-    // print wide charcters
+    // print individual wide characters
     wprintf(L"Star :%lc\n", star);
     wprintf(L"Greek pi: %lc\n", pi);
     wprintf(L"Hebrew Alef: %lc\n", hebrew_alef);
+    wprintf(L"pài: %lc\n", pài);
+}
+
+void usingUnicodeSymbols()
+{
+    wchar_t star = L'★';
+    wchar_t pi = L'π';
+    wchar_t hebrew_alef = L'א';
+    wchar_t pài = L'𠂢';
+
+    // print individual wide characters
+    wprintf(L"Star :%lc\n", star);
+    wprintf(L"Greek pi: %lc\n", pi);
+    wprintf(L"Hebrew Alef: %lc\n", hebrew_alef);
+    wprintf(L"pài: %lc\n", pài);
+}
+
+int main() 
+{
+    setlocale(LC_ALL, "");      // user-preferred locale
+    usingCodePoints();
+    usingUnicodeSymbols();
 }

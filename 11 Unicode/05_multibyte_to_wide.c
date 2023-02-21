@@ -1,24 +1,19 @@
-#include <iostream>
-#include <iomanip>
-#include <clocale>
-#include <cwchar>
-#include <string>
-#include <cstring>      // for memset
-using namespace std;
-
 /*
  *  In this example we convert from wide characters to multi-byte strings.
  */
 
-void convert_to_wide_and_print(const wstring& name, const char* multiByteStr)
+#include <stdio.h>
+#include <stdlib.h>
+#include <wchar.h>
+#include <locale.h>
+#include <string.h>
+
+void convert_to_wide_and_print(const wchar_t* name, const char* multiByteString)
 {
-    mbstate_t state;
-    memset(&state, 0, sizeof state);   // zero the state
-    size_t length = 1 + mbsrtowcs(NULL, &multiByteStr, 0, &state);  // state gets set by the call
-    wchar_t wideStr[length];
-    int size = mbsrtowcs(&wideStr[0], &multiByteStr, length, &state);
-    wcout << setw(12) << left << name << L": " << wideStr;
-    wcout << L", size: " << size << endl;
+    int length = 32;
+    wchar_t wideString[length];
+    mbstowcs(wideString, multiByteString, length);
+    wprintf(L"%-16ls: %ls\n", name, wideString);
 }
 
 int main(void)

@@ -30,9 +30,11 @@ Check out these web sites:
 #include <stdio.h>
 #include <wchar.h>
 #include <uchar.h>
+#include <locale.h>
 
 int main(void)
 {
+    setlocale(LC_ALL, "en_US.UTF-8");
     printf("char has size %lu\n", sizeof(char));
     printf("wchar_t has size %lu\n", sizeof(wchar_t));
 

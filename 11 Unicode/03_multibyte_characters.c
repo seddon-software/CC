@@ -11,7 +11,7 @@
  * 
  *  You will notice you can print the Unicode characters themselves or use their code point 
  *  values.  I've copied the Unicode characters in this example from the following website:
- *              https://unicode-table.com/en/
+ *              https://symbl.cc/en/unicode/blocks/
  * 
  *  When working with code points you use the u and U prefixes.  For example, for 16 bit code points:
  *              const char* star2 = "\u2605"
