@@ -2,6 +2,6 @@
 
 int main()
 {
-	printf("f6\n");
+	printf("This is f6\n");
 }
 

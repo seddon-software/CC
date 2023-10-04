@@ -1,7 +1,24 @@
+############################################################
+#
+#   invoke cmake to create 2 separate executables (f, g)
+#   The executables will be placed in the b..
+#
+############################################################
+
+function pause() {
+    set +v
+    read
+    set -v
+}
+
+clear
 rm src/f src/g
 rm -r build
+pause
 cmake -S src -B build
+pause
 cmake --build build
+pause
 
 # execute the files we've just built
 cd src

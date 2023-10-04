@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/f.dir/f1.c.o CMakeFiles/f.dir/f2.c.o CMakeFiles/f.dir/f3.c.o CMakeFiles/f.dir/f_main.c.o -o "/home/chris/home/workspace/CC/24 Makefiles/CMAKE/src/f" 

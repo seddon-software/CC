@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/f6.dir/f6.c.o -o "/home/chris/home/workspace/CC/24 Makefiles/CMAKE2/src/d1/f6" 
