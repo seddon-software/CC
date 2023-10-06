@@ -1,0 +1,3 @@
+/home/chris/home/workspace/CC/24 Makefiles/CMAKE with libraries/build/CMakeFiles/main.dir
+/home/chris/home/workspace/CC/24 Makefiles/CMAKE with libraries/build/CMakeFiles/edit_cache.dir
+/home/chris/home/workspace/CC/24 Makefiles/CMAKE with libraries/build/CMakeFiles/rebuild_cache.dir

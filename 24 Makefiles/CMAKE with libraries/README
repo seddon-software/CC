@@ -1,0 +1,8 @@
+This is another example of CMake, but this time the source files to be build are spread over several directories.
+To see the source files, type:
+    tree src
+
+To run CMake use the script:
+    build_and_run
+
+This will invoke CMake to create executables and then run these executables.
