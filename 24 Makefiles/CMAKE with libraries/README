@@ -1,8 +1,20 @@
-This is another example of CMake, but this time the source files to be build are spread over several directories.
-To see the source files, type:
-    tree src
+This is another example of CMake, but this time a group of source files are used to to be build a
+shared library:
+    lib/f1.c
+    lib/f2.c
+    lib/f3.c
+    lib/f4.c
+    
+The shared library will be created in the build-lib folder:
+    build-lib/libmylib.so
+
+This library is then linked with a compiled main program:
+    src/main.c
+
+The resulting executable is stored in the build folder:
+    build/main
 
 To run CMake use the script:
-    build_and_run
+    generate_build_and_run.sh
 
-This will invoke CMake to create executables and then run these executables.
+This will invoke CMake twice; the first to create the shared library and the second to build and link the shared library and the main program

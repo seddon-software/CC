@@ -1,4 +1,0 @@
-cd ..
-cmake --build build
-
-
