@@ -29,15 +29,15 @@ cmake --build build-lib
 # generate makefiles for building the main program and linking with the shared library
 pause "generate makefiles for building the main program and linking with the shared library"
 rm -rf build-src
-cmake -S src -B build
+cmake -S src -B build-src
 
 # build and link the shared library
 pause "build and link the shared library"
-cmake --build build
+cmake --build build-src
 
 # run the resulting program
 pause "run the resulting program"
-build/main
+build-src/main
 
 # clean up
 pause "clean up"

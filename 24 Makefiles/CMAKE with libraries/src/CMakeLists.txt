@@ -4,7 +4,7 @@
 
 cmake_minimum_required(VERSION 3.10)
 # set the project name
-project(CMAKE2)
+project(CMAKE-SHARED-LIBS)
 
 #set(CMAKE_C_COMPILER "/usr/bin/gcc")
 set(CMAKE_CXX_STANDARD 11)

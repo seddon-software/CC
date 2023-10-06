@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/main.dir/main.c.o -o main   -L"/home/chris/home/workspace/CC/24 Makefiles/CMAKE with libraries/src/../build-lib"  -Wl,-rpath,"/home/chris/home/workspace/CC/24 Makefiles/CMAKE with libraries/src/../build-lib" -lmylib 
